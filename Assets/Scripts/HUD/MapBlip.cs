@@ -7,6 +7,8 @@ public class MapBlip : MonoBehaviour
 {
     private GameObject blip;
 
+    public GameObject Blip {get { return blip; } }
+
 	// Use this for initialization
 	void Start ()
     {
