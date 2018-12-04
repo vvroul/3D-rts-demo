@@ -5,27 +5,27 @@ using UnityEngine.UI;
 
 public class MapBlip : MonoBehaviour
 {
-    private GameObject blip;
+    private GameObject _blip;
 
-    public GameObject Blip {get { return blip; } }
+    public GameObject Blip {get { return _blip; } }
 
 	// Use this for initialization
 	void Start ()
     {
-        blip = Instantiate(Map.current.blipPrefab);
-        blip.transform.SetParent(Map.current.transform);
+        _blip = Instantiate(Map.current.blipPrefab);
+        _blip.transform.SetParent(Map.current.transform);
         var color = GetComponent<Player>().info.AccentColor;
-        blip.GetComponent<Image>().color = color;
+        _blip.GetComponent<Image>().color = color;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        blip.transform.position = Map.current.WorldPositionToMap(transform.position);
+        _blip.transform.position = Map.current.WorldPositionToMap(transform.position);
 	}
 
     void OnDestroy()
     {
-        GameObject.Destroy(blip);
+        GameObject.Destroy(_blip);
     }
 }
