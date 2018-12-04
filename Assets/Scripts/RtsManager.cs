@@ -38,12 +38,12 @@ public class RtsManager : MonoBehaviour {
                 var go = (GameObject) GameObject.Instantiate(u, p.Location.position, p.Location.rotation);
                 var player = go.AddComponent<Player>();
                 player.Info = p;
-                if (p.IsAi) continue;
-                if (Player.Default == null)
+                if (!p.IsAi)
                 {
-                    Player.Default = p;
+                    if (Player.Default == null) Player.Default = p;
+                    go.AddComponent<RightClickNavigation>();
+                    go.AddComponent<ActionSelect>();
                 }
-                go.AddComponent<RightClickNavigation>();
             }
         }
 	}
