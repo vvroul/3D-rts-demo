@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class Interaction : MonoBehaviour
+namespace Interactions
 {
-    public abstract void Select();
-    public abstract void Deselect();
+    public abstract class Interaction : MonoBehaviour
+    {
+        public abstract void Select();
+        public abstract void Deselect();
+    }
 }

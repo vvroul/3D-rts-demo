@@ -212,8 +212,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: -0.21107648, y: 0.7868479, z: 0.37660715, w: 0.44100374}
-  m_LocalPosition: {x: -112.64421, y: -502.60327, z: 192.05591}
+  m_LocalRotation: {x: 0.30670196, y: 0.27099726, z: 0.091556296, w: -0.9078061}
+  m_LocalPosition: {x: 129.31406, y: -464.06592, z: -305.69174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -1316,7 +1316,7 @@ MonoBehaviour:
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
     IsAi: 1
     Credits: 500
-  mapCollider: {fileID: 214253329}
+  MapCollider: {fileID: 214253329}
 --- !u!4 &535701213
 Transform:
   m_ObjectHideFlags: 0
@@ -2714,6 +2714,7 @@ GameObject:
   - component: {fileID: 946623089}
   - component: {fileID: 946623088}
   - component: {fileID: 946623087}
+  - component: {fileID: 946623090}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -2754,10 +2755,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f5e171f078c340a1a90c992762e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewPort: {fileID: 455131861}
-  corner1: {fileID: 1836301297}
-  corner2: {fileID: 811939679}
-  blipPrefab: {fileID: 1688904828515472, guid: 8025fc65dc328eb4ea5ba92072976ee1, type: 2}
+  ViewPort: {fileID: 455131861}
+  Corner1: {fileID: 1836301297}
+  Corner2: {fileID: 811939679}
+  BlipPrefab: {fileID: 1688904828515472, guid: 8025fc65dc328eb4ea5ba92072976ee1, type: 2}
 --- !u!114 &946623088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2794,6 +2795,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946623085}
   m_CullTransparentMesh: 0
+--- !u!114 &946623090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946623085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7765c655785c6b947811237cf1c8e188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProfilePic: {fileID: 312462220}
+  Line1: {fileID: 1620184638}
+  Line2: {fileID: 1249066589}
+  Line3: {fileID: 1270987476}
 --- !u!1 &979292637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3575,6 +3591,7 @@ GameObject:
   - component: {fileID: 1422849058}
   - component: {fileID: 1422849060}
   - component: {fileID: 1422849059}
+  - component: {fileID: 1422849061}
   m_Layer: 5
   m_Name: Info
   m_TagString: Untagged
@@ -3642,6 +3659,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422849057}
   m_CullTransparentMesh: 0
+--- !u!114 &1422849061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422849057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7765c655785c6b947811237cf1c8e188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProfilePic: {fileID: 0}
+  Line1: {fileID: 1620184638}
+  Line2: {fileID: 1249066589}
+  Line3: {fileID: 1270987476}
 --- !u!1001 &1546765268
 Prefab:
   m_ObjectHideFlags: 0
@@ -3954,8 +3986,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688393481}
-  m_LocalRotation: {x: -0.21107648, y: 0.7868479, z: 0.37660715, w: 0.44100374}
-  m_LocalPosition: {x: -112.64421, y: -504.80325, z: 192.05591}
+  m_LocalRotation: {x: 0.30670196, y: 0.27099726, z: 0.091556296, w: -0.9078061}
+  m_LocalPosition: {x: 129.31406, y: -466.26593, z: -305.69174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -4253,8 +4285,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988496596}
-  m_LocalRotation: {x: -0.21107648, y: 0.7868479, z: 0.37660715, w: 0.44100374}
-  m_LocalPosition: {x: -112.64421, y: -504.80325, z: 192.05591}
+  m_LocalRotation: {x: 0.30670196, y: 0.27099726, z: 0.091556296, w: -0.9078061}
+  m_LocalPosition: {x: 129.31406, y: -466.26593, z: -305.69174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}

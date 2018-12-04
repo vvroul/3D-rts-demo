@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Interactions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Interactive : MonoBehaviour
 {
-    private bool _selected = false;
+    private bool Selected { get; set; }
 
-    public bool selected
+    [FormerlySerializedAs("swap")] public bool Swap = false;
+
+    public Interactive()
     {
-        get { return _selected; }
+        Selected = false;
     }
-
-    public bool swap = false;
 
     public void Select()
     {
-        _selected = true;
+        Selected = true;
         foreach(var selection in GetComponents<Interaction>())
         {
             selection.Select();
@@ -24,7 +26,7 @@ public class Interactive : MonoBehaviour
 
     public void Deselect()
     {
-        _selected = false;
+        Selected = false;
         foreach (var selection in GetComponents<Interaction>())
         {
             selection.Deselect();
@@ -33,24 +35,22 @@ public class Interactive : MonoBehaviour
 
 
 	// Use this for initialization
-	void Start () {
+    private void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update ()
+    private void Update ()
     {
-		if (swap)
+        if (!Swap) return;
+        Swap = false;
+        if (Selected)
         {
-            swap = false;
-            if (_selected)
-            {
-                Deselect();
-            }
-            else
-            {
-                Select();
-            }
+            Deselect();
         }
-	}
+        else
+        {
+            Select();
+        }
+    }
 }

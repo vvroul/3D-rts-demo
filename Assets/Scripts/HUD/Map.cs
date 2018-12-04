@@ -1,43 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Map : MonoBehaviour
 {
-    public RectTransform viewPort;
-    public Transform corner1, corner2;
-    public GameObject blipPrefab;
-    public static Map current;
+    [FormerlySerializedAs("viewPort")] public RectTransform ViewPort;
+    [FormerlySerializedAs("corner1")] public Transform Corner1;
+    [FormerlySerializedAs("corner2")] public Transform Corner2;
+    [FormerlySerializedAs("blipPrefab")] public GameObject BlipPrefab;
+    public static Map Current;
 
-    private Vector2 terrainSize;
-    private RectTransform mapRect;
+    private Vector2 _terrainSize;
+    private RectTransform _mapRect;
 
     public Map()
     {
-        current = this;
+        Current = this;
     }
-     
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    private void Start()
     {
-        terrainSize = new Vector2(
-                corner2.position.x - corner1.position.x,
-                corner2.position.z - corner1.position.z);
-        mapRect = GetComponent<RectTransform>();
-	}
+        _terrainSize = new Vector2(
+            Corner2.position.x - Corner1.position.x,
+            Corner2.position.z - Corner1.position.z);
+        _mapRect = GetComponent<RectTransform>();
+    }
 
     public Vector2 WorldPositionToMap(Vector3 point)
     {
-        var pos = point - corner1.position;
+        var pos = point - Corner1.position;
         var mapPos = new Vector2(
-                point.x / terrainSize.x * mapRect.rect.width,
-                point.z / terrainSize.y * mapRect.rect.height);
+            point.x / _terrainSize.x * _mapRect.rect.width,
+            point.z / _terrainSize.y * _mapRect.rect.height);
         return mapPos;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    [SuppressMessage("ReSharper", "Unity.InefficientCameraMainUsage")]
+    private void Update()
     {
-        viewPort.position = WorldPositionToMap(Camera.main.transform.position);
-	}
+        // ReSharper disable once Unity.InefficientCameraMainUsage
+        if (Camera.main != null) 
+            ViewPort.position = WorldPositionToMap(Camera.main.transform.position);
+    }
 }

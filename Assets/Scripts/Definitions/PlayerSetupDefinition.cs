@@ -1,22 +1,28 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-[System.Serializable]
-public class PlayerSetupDefinition  {
+namespace Definitions
+{
+    [System.Serializable]
+    public class PlayerSetupDefinition
+    {
+        public string Name;
 
-	public string Name;
+        public Transform Location;
 
-	public Transform Location;
+        public Color AccentColor;
 
-	public Color AccentColor;
+        public List<GameObject> StartingUnits = new List<GameObject>();
 
-	public List<GameObject> StartingUnits = new List<GameObject>();
+        private readonly List<GameObject> _activeUnits = new List<GameObject>();
 
-    private List<GameObject> activeUnits = new List<GameObject>();
+        public List<GameObject> ActiveUnits
+        {
+            get { return _activeUnits; }
+        }
 
-    public List<GameObject> ActiveUnits { get { return activeUnits; } }
+        public bool IsAi;
 
-	public bool IsAi;
-
-	public float Credits;
+        public float Credits;
+    }
 }

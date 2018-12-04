@@ -1,31 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MapBlip : MonoBehaviour
 {
-    private GameObject _blip;
-
-    public GameObject Blip {get { return _blip; } }
+	public GameObject Blip { get; private set; }
 
 	// Use this for initialization
-	void Start ()
-    {
-        _blip = Instantiate(Map.current.blipPrefab);
-        _blip.transform.SetParent(Map.current.transform);
-        var color = GetComponent<Player>().info.AccentColor;
-        _blip.GetComponent<Image>().color = color;
+	private void Start ()
+	{
+		Blip = Instantiate(Map.Current.BlipPrefab);
+		Blip.transform.SetParent(Map.Current.transform);
+		var color = GetComponent<Player>().Info.AccentColor;
+		Blip.GetComponent<Image>().color = color;
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
-        _blip.transform.position = Map.current.WorldPositionToMap(transform.position);
+	private void Update ()
+	{
+		Blip.transform.position = Map.Current.WorldPositionToMap(transform.position);
 	}
 
-    void OnDestroy()
-    {
-        GameObject.Destroy(_blip);
-    }
+	private void OnDestroy()
+	{
+		GameObject.Destroy(Blip);
+	}
 }

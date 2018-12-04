@@ -4,10 +4,10 @@ using UnityEditor;
 
 namespace RTS_Cam
 {
-    [CustomEditor(typeof(RTS_Camera))]
+    [CustomEditor(typeof(RTS_Camera.Scripts.RTS_Camera))]
     public class RTS_CameraEditor : Editor
     {
-        private RTS_Camera camera { get { return target as RTS_Camera; } }
+        private RTS_Camera.Scripts.RTS_Camera camera { get { return target as RTS_Camera.Scripts.RTS_Camera; } }
 
         private TabsBlock tabs;
 

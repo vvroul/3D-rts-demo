@@ -1,26 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Highlight : Interaction
+namespace Interactions
 {
-
-    public GameObject displayItem;
-
-    public override void Deselect()
+    public class Highlight : Interaction
     {
-        displayItem.SetActive(false);
-    }
 
-    public override void Select()
-    {
-        displayItem.SetActive(true);
-    }
+        [FormerlySerializedAs("displayItem")] public GameObject DisplayItem;
 
-    // Use this for initialization
-    void Start()
-    {
-        displayItem.SetActive(false);
-    }
+        public override void Deselect()
+        {
+            DisplayItem.SetActive(false);
+        }
 
+        public override void Select()
+        {
+            DisplayItem.SetActive(true);
+        }
+
+        // Use this for initialization
+        private void Start()
+        {
+            DisplayItem.SetActive(false);
+        }
+
+    }
 }

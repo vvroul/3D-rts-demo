@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MarkColor : MonoBehaviour
 {
 
-    public MeshRenderer[] renderers;
+    [FormerlySerializedAs("renderers")] public MeshRenderer[] Renderers;
 
 	// Use this for initialization
-	void Start ()
+    private void Start ()
     {
-        var color = GetComponent<Player>().info.AccentColor;
-        foreach(var r in renderers)
+        var color = GetComponent<Player>().Info.AccentColor;
+        foreach(var r in Renderers)
         {
-            foreach(Material c in r.materials)
+            foreach(var c in r.materials)
             {
                 c.color = color;
             }

@@ -1,50 +1,52 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class VisibilityManager : MonoBehaviour {
+public class VisibilityManager : MonoBehaviour
+{
+    [FormerlySerializedAs("timeBetweenChecks")]
+    public float TimeBetweenChecks = 1;
 
-    public float timeBetweenChecks = 1;
-    public float visibleRange = 100;
+    [FormerlySerializedAs("visibleRange")] public float VisibleRange = 100;
 
-    private float waited = 10000;
+    private float _waited = 10000;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        waited = Time.deltaTime;
-        if (waited <= timeBetweenChecks)
+    // Use this for initialization
+    private void Start()
+    {
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        _waited = Time.deltaTime;
+        if (_waited <= TimeBetweenChecks)
             return;
-        waited = 0;
-        List<MapBlip> pBlips = new List<MapBlip>();
-        List<MapBlip> oBlips = new List<MapBlip>();
+        _waited = 0;
+        var pBlips = new List<MapBlip>();
+        var oBlips = new List<MapBlip>();
 
-        foreach(var p in RtsManager.Current.Players)
+        foreach (var p in RtsManager.Current.Players)
         {
-            foreach(var u in p.ActiveUnits)
+            foreach (var u in p.ActiveUnits)
             {
                 var blip = u.GetComponent<MapBlip>();
-                if (p == Player._default) pBlips.Add(blip);
+                if (p == Player.Default) pBlips.Add(blip);
                 else oBlips.Add(blip);
             }
         }
 
-        foreach(var o in oBlips)
+        foreach (var o in oBlips)
         {
-            bool active = false;
-            foreach(var p in pBlips)
+            var active = false;
+            foreach (var p in pBlips)
             {
                 var distance = Vector3.Distance(o.transform.position, p.transform.position);
-                if (distance <= visibleRange)
-                {
-                    active = true;
-                    break;
-                }
+                if (!(distance <= VisibleRange)) continue;
+                active = true;
+                break;
             }
+
             o.Blip.SetActive(active);
             foreach (var r in o.GetComponentsInChildren<Renderer>())
                 r.enabled = active;

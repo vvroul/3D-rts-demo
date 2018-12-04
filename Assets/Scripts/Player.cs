@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Definitions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
-    public PlayerSetupDefinition info;
-    public static PlayerSetupDefinition _default;
+    [FormerlySerializedAs("info")] public PlayerSetupDefinition Info;
+    public static PlayerSetupDefinition Default;
 
-    void Start()
+    private void Start()
     {
-        info.ActiveUnits.Add(this.gameObject);
+        Info.ActiveUnits.Add(this.gameObject);
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
-        info.ActiveUnits.Remove(this.gameObject);
+        Info.ActiveUnits.Remove(this.gameObject);
     }
 
 }

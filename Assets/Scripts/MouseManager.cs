@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+    private readonly List<Interactive> _selections = new List<Interactive>();
 
-    private List<Interactive> selections = new List<Interactive>();
-
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    private void Update()
     {
-	    if (!Input.GetMouseButton(0))
+        if (!Input.GetMouseButton(0))
         {
             return;
         }
@@ -21,35 +20,39 @@ public class MouseManager : MonoBehaviour
             return;
         }
 
-        if (selections.Count > 0)
+        if (_selections.Count > 0)
         {
             if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
             {
-                foreach (var sel in selections)
+                foreach (var sel in _selections)
                 {
                     if (sel != null)
                     {
                         sel.Deselect();
                     }
                 }
-                selections.Clear();
+
+                _selections.Clear();
             }
         }
 
+        // ReSharper disable once Unity.InefficientCameraMainUsage
+        if (Camera.main == null) return;
+        // ReSharper disable once Unity.InefficientCameraMainUsage
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (!Physics.Raycast(ray, out hit))
         {
             return;
         }
+
         var interact = hit.transform.GetComponent<Interactive>();
         if (interact == null)
         {
             return;
         }
 
-        selections.Add(interact);
+        _selections.Add(interact);
         interact.Select();
-
-	}
+    }
 }
