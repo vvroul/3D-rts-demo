@@ -7,13 +7,13 @@ using Image = UnityEngine.Experimental.UIElements.Image;
 
 public class InfoManager : MonoBehaviour
 {
-	private static InfoManager _current;
+	public static InfoManager Current;
 	public UnityEngine.UI.Image ProfilePic;
 	public Text Line1, Line2, Line3;
 
 	public InfoManager()
 	{
-		_current = this;
+		Current = this;
 	}
 
 	public void SetLines(string line1, string line2, string line3)

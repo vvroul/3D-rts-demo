@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 195792236121105114}
   - component: {fileID: 114624666077779672}
   - component: {fileID: 114092172867368952}
+  - component: {fileID: 114415550339992478}
   m_Layer: 0
   m_Name: Drone Unit
   m_TagString: Untagged
@@ -709,7 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127750a08ecb9784a82ef6adcfb2fa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayItem: {fileID: 1041730848939750}
+  DisplayItem: {fileID: 1041730848939750}
 --- !u!114 &114335028845838168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -721,7 +722,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840ab2a06eb1a8845b25cb0341a4dff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swap: 0
+  Swap: 0
+--- !u!114 &114415550339992478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676574707831108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea22b8db744c9d47a5d9ad0f9d3dfba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Drone
+  MaxHealth: 100
+  CurrentHealth: 100
+  ProfilePic: {fileID: 21300000, guid: d2631baaba1e7714783be2cba0bc36dd, type: 3}
 --- !u!114 &114624666077779672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -733,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06f700fc8c4cb47a959e926ce02508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers:
+  Renderers:
   - {fileID: 23753340729958416}
 --- !u!114 &114757685097126250
 MonoBehaviour:
