@@ -554,7 +554,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: afd6783c3efd21b40af4ac78cc4868ad, type: 2}
+  - {fileID: 2100000, guid: bf8341300f7ca604588db8475af26c7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0234044293a8c6c4ab83269973f1bd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonPic: {fileID: 21300000, guid: 13acf7e05c1ed614f9e5e4649e237b1a, type: 3}
+  ButtonPic: {fileID: 21300000, guid: 508c976c74c96c54fbd9d97bb831ed82, type: 3}
 --- !u!114 &114083050361172438
 MonoBehaviour:
   m_ObjectHideFlags: 1

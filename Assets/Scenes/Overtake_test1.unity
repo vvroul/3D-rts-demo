@@ -212,8 +212,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: 0.29152387, y: 0.09420723, z: 0.028864617, w: -0.95147556}
-  m_LocalPosition: {x: 386.3137, y: -713.94446, z: -507.354}
+  m_LocalRotation: {x: -0.11976387, y: 0.88021046, z: 0.32111222, w: 0.32828823}
+  m_LocalPosition: {x: -43.039948, y: -381.7823, z: 2.7706757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -1807,10 +1807,10 @@ GameObject:
   m_Component:
   - component: {fileID: 597240286}
   - component: {fileID: 597240285}
-  - component: {fileID: 597240284}
   - component: {fileID: 597240283}
   - component: {fileID: 597240282}
-  - component: {fileID: 597240288}
+  - component: {fileID: 597240287}
+  - component: {fileID: 597240284}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1832,13 +1832,63 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597240281}
   m_Enabled: 1
---- !u!92 &597240284
-Behaviour:
+--- !u!114 &597240284
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597240281}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastTab: 2
+  movementSettingsFoldout: 0
+  zoomingSettingsFoldout: 0
+  rotationSettingsFoldout: 0
+  heightSettingsFoldout: 0
+  mapLimitSettingsFoldout: 0
+  targetingSettingsFoldout: 0
+  inputSettingsFoldout: 0
+  useFixedUpdate: 0
+  keyboardMovementSpeed: 100
+  screenEdgeMovementSpeed: 50
+  followingSpeed: 5
+  rotationSped: 3
+  panningSpeed: 50
+  mouseRotationSpeed: 10
+  autoHeight: 1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  maxHeight: 80
+  minHeight: 60
+  heightDampening: 60
+  keyboardZoomingSensitivity: 2
+  scrollWheelZoomingSensitivity: 25
+  limitMap: 0
+  limitX: 50
+  limitY: 50
+  targetFollow: {fileID: 0}
+  targetOffset: {x: 0, y: 0, z: 0}
+  useScreenEdgeInput: 1
+  screenEdgeBorder: 25
+  useKeyboardInput: 1
+  horizontalAxis: Horizontal
+  verticalAxis: Vertical
+  usePanning: 1
+  panningKey: 325
+  useKeyboardZooming: 0
+  zoomInKey: 101
+  zoomOutKey: 113
+  useScrollwheelZooming: 1
+  zoomingAxis: Mouse ScrollWheel
+  useKeyboardRotation: 0
+  rotateRightKey: 120
+  rotateLeftKey: 122
+  useMouseRotation: 0
+  mouseRotationKey: 324
 --- !u!20 &597240285
 Camera:
   m_ObjectHideFlags: 0
@@ -1885,70 +1935,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597240281}
-  m_LocalRotation: {x: -0.20808837, y: -0.7914059, z: 0.42202514, w: -0.39021876}
-  m_LocalPosition: {x: 18.465942, y: -227.62683, z: -11.79805}
+  m_LocalRotation: {x: -0.17852391, y: -0.8104223, z: 0.4616627, w: -0.31338874}
+  m_LocalPosition: {x: 14.547333, y: -242.78668, z: -12.290573}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 30, z: 30}
---- !u!114 &597240288
-MonoBehaviour:
+--- !u!92 &597240287
+Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597240281}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastTab: 2
-  movementSettingsFoldout: 0
-  zoomingSettingsFoldout: 0
-  rotationSettingsFoldout: 0
-  heightSettingsFoldout: 0
-  mapLimitSettingsFoldout: 0
-  targetingSettingsFoldout: 0
-  inputSettingsFoldout: 0
-  useFixedUpdate: 0
-  keyboardMovementSpeed: 80
-  screenEdgeMovementSpeed: 80
-  followingSpeed: 5
-  rotationSped: 3
-  panningSpeed: 100
-  mouseRotationSpeed: 10
-  autoHeight: 0
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  maxHeight: 80
-  minHeight: 50
-  heightDampening: 5
-  keyboardZoomingSensitivity: 2
-  scrollWheelZoomingSensitivity: 25
-  limitMap: 0
-  limitX: 50
-  limitY: 50
-  targetFollow: {fileID: 0}
-  targetOffset: {x: 0, y: 0, z: 0}
-  useScreenEdgeInput: 1
-  screenEdgeBorder: 25
-  useKeyboardInput: 1
-  horizontalAxis: Horizontal
-  verticalAxis: Vertical
-  usePanning: 1
-  panningKey: 325
-  useKeyboardZooming: 0
-  zoomInKey: 101
-  zoomOutKey: 113
-  useScrollwheelZooming: 1
-  zoomingAxis: Mouse ScrollWheel
-  useKeyboardRotation: 0
-  rotateRightKey: 120
-  rotateLeftKey: 122
-  useMouseRotation: 0
-  mouseRotationKey: 324
 --- !u!1 &634124630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,8 +4112,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688393481}
-  m_LocalRotation: {x: 0.29152387, y: 0.09420723, z: 0.028864617, w: -0.95147556}
-  m_LocalPosition: {x: 386.3137, y: -716.1445, z: -507.354}
+  m_LocalRotation: {x: -0.18099874, y: 0.77618754, z: 0.25705644, w: 0.5465295}
+  m_LocalPosition: {x: -135.36613, y: -420.3463, z: -43.27185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -4411,8 +4411,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988496596}
-  m_LocalRotation: {x: 0.29152387, y: 0.09420723, z: 0.028864617, w: -0.95147556}
-  m_LocalPosition: {x: 386.3137, y: -716.1445, z: -507.354}
+  m_LocalRotation: {x: -0.19783518, y: 0.7260532, z: 0.23322323, w: 0.6158855}
+  m_LocalPosition: {x: -135.36613, y: -420.3463, z: -43.27185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
