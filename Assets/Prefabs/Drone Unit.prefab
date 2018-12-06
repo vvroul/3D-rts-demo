@@ -675,6 +675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonPic: {fileID: 21300000, guid: 508c976c74c96c54fbd9d97bb831ed82, type: 3}
+  GhostBuildingPrefab: {fileID: 1581997206660510, guid: 76d97b43a4353b444a372a23ce873bc2,
+    type: 2}
 --- !u!114 &114083050361172438
 MonoBehaviour:
   m_ObjectHideFlags: 1
