@@ -28,6 +28,11 @@ public class RtsManager : MonoBehaviour {
         return null;
     }
 
+    public bool IsGameObjectSafeToPlace(GameObject go)
+    {
+        return true;
+    }
+
 	// Use this for initialization
     private void Start () {
 		Current = this;
