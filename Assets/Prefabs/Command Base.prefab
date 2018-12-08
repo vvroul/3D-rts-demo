@@ -32,8 +32,8 @@ GameObject:
   - component: {fileID: 114169483590005554}
   - component: {fileID: 114457459546407796}
   - component: {fileID: 114453976272495504}
-  - component: {fileID: 114565022330258660}
   - component: {fileID: 114159310935675214}
+  - component: {fileID: 114535247093657206}
   m_Layer: 0
   m_Name: Command Base
   m_TagString: Untagged
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06301e7d3c69f0048bfdbc1713fc647e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114565022330258660
+--- !u!114 &114535247093657206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

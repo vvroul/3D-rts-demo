@@ -6,6 +6,9 @@ namespace Actions
 	public class CreateBuildingAction : ActionBehavior
 	{
 
+		public GameObject BuildingPrefab;
+		public float MaxBuildingDistance = 30;
+
 		public GameObject GhostBuildingPrefab;
 
 		private GameObject active = null;
@@ -15,7 +18,11 @@ namespace Actions
 			return delegate
 			{
 				var go = GameObject.Instantiate(GhostBuildingPrefab);
-				go.AddComponent<FindBuildingSite>();
+				var finder = go.AddComponent<FindBuildingSite>();
+				finder.BuildingPrefab = BuildingPrefab;
+				finder.MaxBuildingDistance = MaxBuildingDistance;
+				finder.Info = GetComponent<Player>().Info;
+				finder.Source = transform;
 				active = go;
 			};
 		}

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+
+    public static MouseManager Current;
+
+    public MouseManager()
+    {
+        Current = this;
+    }
+    
     private readonly List<Interactive> _selections = new List<Interactive>();
 
     // Update is called once per frame

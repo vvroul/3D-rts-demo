@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Definitions;
 using Interactions;
 using UnityEngine.Serialization;
+using System.Linq;
+using UnityEngine.AI;
 
 
 public class RtsManager : MonoBehaviour {
@@ -30,6 +32,34 @@ public class RtsManager : MonoBehaviour {
 
     public bool IsGameObjectSafeToPlace(GameObject go)
     {
+        var verts = go.GetComponent<MeshFilter>().mesh.vertices;
+
+        var obstacles = GameObject.FindObjectsOfType<NavMeshObstacle>();
+        var cols = new List<Collider>();
+        foreach (var o in obstacles)
+        {
+            if (o.gameObject != go)
+            {
+                cols.Add(o.gameObject.GetComponent<Collider>());
+            }
+        }
+
+        foreach (var v in verts)
+        {
+            NavMeshHit hit;
+            var vReal = go.transform.TransformPoint(v);
+            NavMesh.SamplePosition(vReal, out hit, 20, NavMesh.AllAreas);
+
+            bool onXaxis = Mathf.Abs(hit.position.x - vReal.x) < 0.5f;
+            bool onZaxis = Mathf.Abs(hit.position.z - vReal.z) < 0.5f;
+            bool hitCollider = cols.Any(c => c.bounds.Contains(vReal));
+
+            if (!onXaxis || !onZaxis || hitCollider)
+            {
+                return false;
+            }
+        }
+        
         return true;
     }
 
