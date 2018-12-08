@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FindBuildingSite : MonoBehaviour
 {
-
+	public float Cost = 200;
 	public float MaxBuildingDistance = 30;
 	public GameObject BuildingPrefab;
 	public PlayerSetupDefinition Info;
@@ -42,6 +42,7 @@ public class FindBuildingSite : MonoBehaviour
 			{
 				var go = GameObject.Instantiate(BuildingPrefab);
 				go.transform.position = transform.position;
+				Info.Credits -= Cost;
 				go.AddComponent<Player>().Info = Info;
 				Destroy(this.gameObject);
 			}

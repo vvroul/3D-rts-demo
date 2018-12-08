@@ -6,6 +6,7 @@ namespace Actions
 	public class CreateBuildingAction : ActionBehavior
 	{
 
+		public float Cost = 0;
 		public GameObject BuildingPrefab;
 		public float MaxBuildingDistance = 30;
 
@@ -17,11 +18,16 @@ namespace Actions
 		{
 			return delegate
 			{
+				var player = GetComponent<Player>().Info;
+//				if (player.Credits < Cost)
+//				{
+//					Debug.Log("Not enough");
+//				}
 				var go = GameObject.Instantiate(GhostBuildingPrefab);
 				var finder = go.AddComponent<FindBuildingSite>();
 				finder.BuildingPrefab = BuildingPrefab;
 				finder.MaxBuildingDistance = MaxBuildingDistance;
-				finder.Info = GetComponent<Player>().Info;
+				finder.Info = player;
 				finder.Source = transform;
 				active = go;
 			};

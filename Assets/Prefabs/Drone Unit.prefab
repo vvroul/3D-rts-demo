@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonPic: {fileID: 21300000, guid: 508c976c74c96c54fbd9d97bb831ed82, type: 3}
+  Cost: 200
   BuildingPrefab: {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
   MaxBuildingDistance: 30
   GhostBuildingPrefab: {fileID: 1581997206660510, guid: 76d97b43a4353b444a372a23ce873bc2,
