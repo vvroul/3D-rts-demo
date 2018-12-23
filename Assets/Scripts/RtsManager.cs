@@ -84,4 +84,6 @@ public class RtsManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+    
+    
 }

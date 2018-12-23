@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 114159310935675214}
   - component: {fileID: 114535247093657206}
   - component: {fileID: 114731395559338666}
+  - component: {fileID: 114182687768372846}
   m_Layer: 0
   m_Name: Command Base
   m_TagString: Untagged
@@ -306,6 +307,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Swap: 0
+--- !u!114 &114182687768372846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396602d247bf533448198cc3b6f1a7d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonPic: {fileID: 21300000, guid: d2631baaba1e7714783be2cba0bc36dd, type: 3}
+  Prefab: {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+  Cost: 25
 --- !u!114 &114453976272495504
 MonoBehaviour:
   m_ObjectHideFlags: 1

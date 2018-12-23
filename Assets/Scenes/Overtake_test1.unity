@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.5161054, g: 0.5188679, b: 0.4723656, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9e1408a1a546b6c408b82da3a0970d14, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -212,8 +212,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: -0.1810464, y: 0.81873983, z: 0.3748079, w: 0.39548236}
-  m_LocalPosition: {x: -44.646606, y: -338.472, z: -19.612076}
+  m_LocalRotation: {x: -0.08971537, y: 0.8915098, z: 0.20236598, w: 0.39523345}
+  m_LocalPosition: {x: -89.03476, y: -382.54117, z: -2.2276154}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -462,7 +462,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -4112,8 +4112,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688393481}
-  m_LocalRotation: {x: -0.21378875, y: 0.7846056, z: 0.38221595, w: 0.43886146}
-  m_LocalPosition: {x: -115.44385, y: -481.11823, z: 4.8650208}
+  m_LocalRotation: {x: -0.08971537, y: 0.8915098, z: 0.20236598, w: 0.39523345}
+  m_LocalPosition: {x: -132.40836, y: -458.21585, z: 169.34552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -4411,8 +4411,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988496596}
-  m_LocalRotation: {x: -0.21378875, y: 0.7846056, z: 0.38221595, w: 0.43886146}
-  m_LocalPosition: {x: -115.44385, y: -481.11823, z: 4.8650208}
+  m_LocalRotation: {x: -0.08971537, y: 0.8915098, z: 0.20236598, w: 0.39523345}
+  m_LocalPosition: {x: -132.40836, y: -458.21585, z: 169.34552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
