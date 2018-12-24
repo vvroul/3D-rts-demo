@@ -42,6 +42,8 @@ namespace Ai
 		{
 			_waited += Time.deltaTime;
 			if (_waited < Frequency) return;
+
+			string aiLog = "";
 			var bestAiValue = float.MinValue;
 			AiBehavior bestAi = null;
 			AiSupport.GetSupport(gameObject).Refresh();
@@ -51,11 +53,13 @@ namespace Ai
 				ai.TimePassed += _waited;
 				
 				var aiValue = ai.GetWeight() * ai.WeightMultiplier + Random.Range(0, Confusion);
+				aiLog += ai.GetType().Name + ": " + aiValue + "\n";
 				if (!(aiValue > bestAiValue)) continue;
 				bestAiValue = aiValue;
 				bestAi = ai;
 			}
-
+			
+			Debug.Log(aiLog);
 			if (bestAi != null) bestAi.Execute();
 			_waited = 0;
 		}

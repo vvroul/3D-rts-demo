@@ -19,10 +19,9 @@ namespace Ai
 		{
 			if (_support == null)  _support = AiSupport.GetSupport(gameObject);
 			if (_support.Player.Credits < Cost || _support.Drones.Count == 0) return 0;
-			if (_support.CommandBases.Count == 0) return 1;
 
-			var weight = _support.CommandBases.Count / UnitsPerBase * _support.Drones.Count;
-			return weight;
+			if (_support.CommandBases.Count * UnitsPerBase <= _support.Drones.Count) return 1;
+			return 0;
 		}
 
 		public override void Execute()
@@ -46,6 +45,8 @@ namespace Ai
 					}
 				}
 			}
+			
+			Destroy(go);
 		}
 	}
 }
