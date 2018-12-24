@@ -33,6 +33,8 @@ namespace Ai
 			{
 				if (p.Name == PlayerName) player = p;
 			}
+
+			gameObject.AddComponent<AiSupport>().Player = player;
 		}
 	
 		// Update is called once per frame
@@ -42,7 +44,8 @@ namespace Ai
 			if (_waited < Frequency) return;
 			var bestAiValue = float.MinValue;
 			AiBehavior bestAi = null;
-
+			AiSupport.GetSupport(gameObject).Refresh();
+			
 			foreach (var ai in _ais)
 			{
 				ai.TimePassed += _waited;

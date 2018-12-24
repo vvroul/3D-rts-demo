@@ -212,8 +212,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: -0.08971537, y: 0.8915098, z: 0.20236598, w: 0.39523345}
-  m_LocalPosition: {x: -89.03476, y: -382.54117, z: -2.2276154}
+  m_LocalRotation: {x: -0.11958986, y: 0.83680016, z: 0.4944752, w: 0.20238112}
+  m_LocalPosition: {x: -111.54814, y: -503.45932, z: 195.30612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -354,6 +354,10 @@ Prefab:
     - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
       propertyPath: m_Name
       value: THE_INFESTOR_Prefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
@@ -879,6 +883,10 @@ Prefab:
       propertyPath: m_Name
       value: THE_INFESTOR_Prefab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
   m_IsPrefabAsset: 0
@@ -1166,6 +1174,83 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843740dbe549a4a6ba9556d1b80001f5, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &355147333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355147334}
+  - component: {fileID: 355147336}
+  - component: {fileID: 355147335}
+  - component: {fileID: 355147337}
+  m_Layer: 0
+  m_Name: Player 2 Ai
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &355147334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355147333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 535701213}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &355147335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355147333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657870750bc7fee448e405130823b0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeightMultiplier: 1
+  TimePassed: 0
+  ReturnWeight: 0.5
+--- !u!114 &355147336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355147333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc605f489cf63ac4e9f935cad19d27c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerName: Player 2
+  Confusion: 0.3
+  Frequency: 1
+--- !u!114 &355147337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355147333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39ac10ea1cae5f4e8777a04b86a0f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeightMultiplier: 1
+  TimePassed: 0
+  Cost: 200
+  UnitsPerBase: 5
+  RangeFromDrone: 30
+  TriesPerDrone: 3
+  BasePrefab: {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
 --- !u!1 &374370841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1352,10 @@ Prefab:
         type: 2}
       propertyPath: x_rot_rnd
       value: 38.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
@@ -1405,7 +1494,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 221.74796, y: 395.1081, z: 83.98338}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 355147334}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2363,6 +2453,10 @@ Prefab:
       propertyPath: z_rnd
       value: -60.83
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
   m_IsPrefabAsset: 0
@@ -2428,6 +2522,10 @@ Prefab:
     - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
       propertyPath: m_Name
       value: THE_INFESTOR_Prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
@@ -3335,7 +3433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1202283615
 Transform:
   m_ObjectHideFlags: 0
@@ -3929,6 +4027,10 @@ Prefab:
       propertyPath: m_Name
       value: THE_INFESTOR_Prefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
   m_IsPrefabAsset: 0
@@ -4112,8 +4214,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688393481}
-  m_LocalRotation: {x: -0.08971537, y: 0.8915098, z: 0.20236598, w: 0.39523345}
-  m_LocalPosition: {x: -132.40836, y: -458.21585, z: 169.34552}
+  m_LocalRotation: {x: -0.11958986, y: 0.83680016, z: 0.4944752, w: 0.20238112}
+  m_LocalPosition: {x: -111.54814, y: -505.6593, z: 195.30612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -4411,8 +4513,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988496596}
-  m_LocalRotation: {x: -0.08971537, y: 0.8915098, z: 0.20236598, w: 0.39523345}
-  m_LocalPosition: {x: -132.40836, y: -458.21585, z: 169.34552}
+  m_LocalRotation: {x: -0.11958986, y: 0.83680016, z: 0.4944752, w: 0.20238112}
+  m_LocalPosition: {x: -111.54814, y: -505.6593, z: 195.30612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -4646,6 +4748,10 @@ Prefab:
     - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
       propertyPath: m_Name
       value: THE_INFESTOR_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c65e1482462ff74d9bb4b162b3f9478, type: 2}
