@@ -46,7 +46,7 @@ namespace Ai
 				}
 			}
 			
-			Destroy(go);
+			Destroy(go) ;
 		}
 	}
 }

@@ -367,4 +367,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2022a09ed94bfb247adbd61393cc970c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CreditsPerSecond: 500
+  CreditsPerSecond: 1

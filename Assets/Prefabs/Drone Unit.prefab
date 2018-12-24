@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 114092172867368952}
   - component: {fileID: 114415550339992478}
   - component: {fileID: 114081554489459746}
+  - component: {fileID: 114685327551145038}
   m_Layer: 0
   m_Name: Drone Unit
   m_TagString: Untagged
@@ -769,6 +770,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderers:
   - {fileID: 23753340729958416}
+--- !u!114 &114685327551145038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676574707831108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a126dd2f291704293804cb4788c55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RelaxDistance: 5
 --- !u!114 &114757685097126250
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,6 +24,12 @@ namespace Interactions
             _selected = true;
         }
 
+        public void SendToTarget(Vector3 pos)
+        {
+            _target = pos;
+            SendToTarget();
+        }
+
         public void SendToTarget()
         {
             _agent.SetDestination(_target);
