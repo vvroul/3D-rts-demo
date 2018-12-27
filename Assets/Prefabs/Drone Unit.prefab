@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 114415550339992478}
   - component: {fileID: 114081554489459746}
   - component: {fileID: 114685327551145038}
+  - component: {fileID: 114877329267154164}
   m_Layer: 0
   m_Name: Drone Unit
   m_TagString: Untagged
@@ -795,6 +796,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   speed_rnd: 0.5
+--- !u!114 &114877329267154164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676574707831108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662c604493a5233468524e640078f4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FindTargetDelay: 1
+  AttackRange: 20
+  AttackFrequency: 0.25
+  AttackDamage: 1
+  findTargetCounter: 0
+  attackCounter: 0
+  player:
+    Name: 
+    Location: {fileID: 0}
+    AccentColor: {r: 0, g: 0, b: 0, a: 0}
+    StartingUnits: []
+    IsAi: 0
+    Credits: 0
 --- !u!135 &135702756692318430
 SphereCollider:
   m_ObjectHideFlags: 1
