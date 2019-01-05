@@ -743,6 +743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Swap: 0
+  SelectionBoxImage: {fileID: 114479508734183626, guid: c288e9c02a792fe4f80832dac1af7c37,
+    type: 2}
 --- !u!114 &114415550339992478
 MonoBehaviour:
   m_ObjectHideFlags: 1

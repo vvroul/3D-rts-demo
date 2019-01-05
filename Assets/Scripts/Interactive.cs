@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Definitions;
 using Interactions;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,6 +10,7 @@ public class Interactive : MonoBehaviour
     private bool Selected { get; set; }
 
     [FormerlySerializedAs("swap")] public bool Swap = false;
+    private PlayerSetupDefinition _player;
 
     public Interactive()
     {
