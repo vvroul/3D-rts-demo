@@ -16,7 +16,7 @@ namespace Battle
 		public PlayerSetupDefinition player;
 
 		
-		private ShowUnitInfo target;
+		private ShowUnitInfo _target;
 		
 		// Use this for initialization
 		void Start ()
@@ -26,7 +26,7 @@ namespace Battle
 
 		void FindTarget()
 		{
-			if (target != null) return;
+			if (_target != null) return;
 
 			foreach (var p in RtsManager.Current.Players)
 			{
@@ -36,7 +36,7 @@ namespace Battle
 				{
 					if (Vector3.Distance(unit.transform.position, transform.position) < AttackRange)
 					{
-						target = unit.GetComponent<ShowUnitInfo>();
+						_target = unit.GetComponent<ShowUnitInfo>();
 						return;
 					}
 				}
@@ -45,14 +45,15 @@ namespace Battle
 
 		void Attack()
 		{
-			if (target == null) return;
-			if (Vector3.Distance(target.transform.position, transform.position) > AttackRange)
+			if (_target == null) return;
+			if (Vector3.Distance(_target.transform.position, transform.position) > AttackRange)
 			{
-				target = null;
+				_target = null;
 				return;
 			}
 
-			target.CurrentHealth -= AttackDamage;
+			_target.CurrentHealth -= AttackDamage;
+			if (_target.CurrentHealth <= 0) Destroy(_target.gameObject);
 		}
 	
 		// Update is called once per frame
@@ -71,6 +72,8 @@ namespace Battle
 				Attack();
 				attackCounter = 0;
 			}
+			
+			if (this.gameObject.GetComponent<ShowUnitInfo>().CurrentHealth <= 0) Destroy(this.gameObject);
 		}
 	}
 }
