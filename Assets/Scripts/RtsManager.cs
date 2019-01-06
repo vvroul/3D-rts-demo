@@ -76,6 +76,8 @@ public class RtsManager : MonoBehaviour {
         {
             foreach(var u in p.StartingUnits)
             {
+//                if (u.GetComponent<ShowUnitInfo>().Name == "Command Center") continue;
+                //TO_DO
                 var go = (GameObject) GameObject.Instantiate(u, p.Location.position, p.Location.rotation);
                 var player = go.AddComponent<Player>();
                 player.Info = p;

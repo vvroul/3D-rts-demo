@@ -338,7 +338,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1041730848939750}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -1.27, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 4536233503896464}
@@ -433,7 +433,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676574707831108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 365.3679, y: 4.800258, z: 155.1587}
+  m_LocalPosition: {x: 296.98672, y: 3.8755662, z: 130.09135}
   m_LocalScale: {x: -1, y: -1, z: -1}
   m_Children:
   - {fileID: 4447171496076986}
@@ -743,8 +743,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Swap: 0
-  SelectionBoxImage: {fileID: 114479508734183626, guid: c288e9c02a792fe4f80832dac1af7c37,
-    type: 2}
 --- !u!114 &114415550339992478
 MonoBehaviour:
   m_ObjectHideFlags: 1
