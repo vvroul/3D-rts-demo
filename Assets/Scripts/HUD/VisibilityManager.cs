@@ -7,7 +7,7 @@ public class VisibilityManager : MonoBehaviour
     [FormerlySerializedAs("timeBetweenChecks")]
     public float TimeBetweenChecks = 1;
 
-    [FormerlySerializedAs("visibleRange")] public float VisibleRange = 100;
+    [FormerlySerializedAs("visibleRange")] public float VisibleRange = 5;
 
     private float _waited = 10000;
 

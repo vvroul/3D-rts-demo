@@ -29,7 +29,7 @@ public class Map : MonoBehaviour
 
     public Vector2 WorldPositionToMap(Vector3 point)
     {
-        var pos = point - Corner1.position;
+        //var pos = point - Corner1.position;
         var mapPos = new Vector2(
             point.x / _terrainSize.x * _mapRect.rect.width,
             point.z / _terrainSize.y * _mapRect.rect.height);

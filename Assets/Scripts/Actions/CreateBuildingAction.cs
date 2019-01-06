@@ -1,4 +1,5 @@
 ﻿using System;
+using Interactions;
 using UnityEngine;
 
 namespace Actions
@@ -8,7 +9,7 @@ namespace Actions
 
 		public float Cost = 0;
 		public GameObject BuildingPrefab;
-		public float MaxBuildingDistance = 30;
+		public float MaxBuildingDistance = 5000;
 
 		public GameObject GhostBuildingPrefab;
 
@@ -26,6 +27,7 @@ namespace Actions
 				var go = GameObject.Instantiate(GhostBuildingPrefab);
 				var finder = go.AddComponent<FindBuildingSite>();
 				finder.BuildingPrefab = BuildingPrefab;
+				finder.Worker = gameObject;
 				finder.MaxBuildingDistance = MaxBuildingDistance;
 				finder.Info = player;
 				finder.Source = transform;

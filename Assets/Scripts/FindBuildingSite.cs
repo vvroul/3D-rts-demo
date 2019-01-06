@@ -7,9 +7,10 @@ using UnityEngine;
 public class FindBuildingSite : MonoBehaviour
 {
 	public float Cost = 200;
-	public float MaxBuildingDistance = 30;
+	public float MaxBuildingDistance = 5000;
 	public GameObject BuildingPrefab;
 	public PlayerSetupDefinition Info;
+	public GameObject Worker;
 	public Transform Source;
 	
 	private Renderer rend;
@@ -30,17 +31,18 @@ public class FindBuildingSite : MonoBehaviour
 			return;
 		transform.position = tempTarget.Value;
 
-		if (Vector3.Distance(transform.position, Source.position) > MaxBuildingDistance)
-		{
-			rend.material.color = Red;
-			return;
-		}
+//		if (Vector3.Distance(transform.position, Source.position) > MaxBuildingDistance)
+//		{
+//			rend.material.color = Red;
+//			return;
+//		}
 
 		if (RtsManager.Current.IsGameObjectSafeToPlace(gameObject))
 		{
 			rend.material.color = Green;
 			if (Input.GetMouseButtonDown(0))
 			{
+				Worker.GetComponent<RightClickNavigation>().SendToTarget(transform.position);
 				var go = GameObject.Instantiate(BuildingPrefab);
 				go.AddComponent<ActionSelect>();
 				go.transform.position = transform.position;

@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Definitions;
-using Interactions;
-using UnityEngine;
+﻿using UnityEngine;
 using  UnityEngine.UI;
 using  UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -58,5 +54,7 @@ public class BoxSelect : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 //            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! " + count);
 //            ++count;
 //        }
+//        if (_selectionRect.)
+        Debug.Log("INEndDrag!!!!!!!!!!!!!!!!");
     }
 }

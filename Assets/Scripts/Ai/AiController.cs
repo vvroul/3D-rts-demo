@@ -59,7 +59,7 @@ namespace Ai
 				bestAi = ai;
 			}
 			
-			Debug.Log(aiLog);
+			//Debug.Log(aiLog);
 			if (bestAi != null) bestAi.Execute();
 			_waited = 0;
 		}
