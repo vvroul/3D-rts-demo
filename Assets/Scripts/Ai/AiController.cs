@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using Definitions;
 using Random = UnityEngine.Random;
@@ -8,19 +7,21 @@ namespace Ai
 {
 	public class AiController : MonoBehaviour
 	{
-		public String PlayerName;
+		public string PlayerName;
 		public float Confusion = 0.3f;
 		public float Frequency = 1;
 
-		private PlayerSetupDefinition player;
-		private float _waited = 0;
+		private PlayerSetupDefinition _player;
+		private float _waited;
 		private readonly List<AiBehavior> _ais = new List<AiBehavior>();
 
+/*
 		public PlayerSetupDefinition Player
 		{
-			get { return player; }
+			get { return _player; }
 
 		}
+*/
 
 		// Use this for initialization
 		private void Start () {
@@ -31,10 +32,10 @@ namespace Ai
 
 			foreach (var p in RtsManager.Current.Players)
 			{
-				if (p.Name == PlayerName) player = p;
+				if (p.Name == PlayerName) _player = p;
 			}
 
-			gameObject.AddComponent<AiSupport>().Player = player;
+			gameObject.AddComponent<AiSupport>().Player = _player;
 		}
 	
 		// Update is called once per frame
@@ -43,7 +44,7 @@ namespace Ai
 			_waited += Time.deltaTime;
 			if (_waited < Frequency) return;
 
-			string aiLog = "";
+			var aiLog = "";
 			var bestAiValue = float.MinValue;
 			AiBehavior bestAi = null;
 			AiSupport.GetSupport(gameObject).Refresh();
@@ -59,7 +60,7 @@ namespace Ai
 				bestAi = ai;
 			}
 			
-			//Debug.Log(aiLog);
+			Debug.Log(aiLog);
 			if (bestAi != null) bestAi.Execute();
 			_waited = 0;
 		}

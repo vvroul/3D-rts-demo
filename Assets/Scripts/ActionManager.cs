@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Image = UnityEngine.Experimental.UIElements.Image;
 
 public class ActionManager : MonoBehaviour
 {
@@ -31,7 +29,7 @@ public class ActionManager : MonoBehaviour
     {
         var index = _actionCalls.Count;
         Buttons[index].gameObject.SetActive(true);
-        Buttons[index].GetComponent<UnityEngine.UI.Image>().sprite = pic;
+        Buttons[index].GetComponent<Image>().sprite = pic;
         _actionCalls.Add(onClick);
     }
 
@@ -50,10 +48,5 @@ public class ActionManager : MonoBehaviour
         }
 
         ClearButtons();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
     }
 }

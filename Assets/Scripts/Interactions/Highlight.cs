@@ -5,7 +5,6 @@ namespace Interactions
 {
     public class Highlight : Interaction
     {
-
         [FormerlySerializedAs("displayItem")] public GameObject DisplayItem;
 
         public override void Deselect()

@@ -9,34 +9,35 @@ namespace Actions
 	{
 
 		public GameObject Prefab;
-		public float Cost = 0;
+		public float Cost;
 
-		private PlayerSetupDefinition player;
+		private PlayerSetupDefinition _player;
 
 		private void Start()
 		{
-			player = GetComponent<Player>().Info;
+			_player = GetComponent<Player>().Info;
 		}
 
 		public override Action GetClickAction()
 		{
 			return delegate
 			{
-				if (player.Credits < Cost)
+				if (_player.Credits < Cost)
 				{
 					Debug.Log("Cannot create is costs : " + Cost);
-					return;;
+					return;
 				}
 				
-				var go = (GameObject) GameObject.Instantiate(
+				var go = Instantiate(
 					Prefab,
 					transform.position,
 					Quaternion.identity
 				);
-				go.AddComponent<Player>().Info = player;
+				if (go == null) throw new ArgumentNullException(string.Format("go{0}", "ARG0"));
+				go.AddComponent<Player>().Info = _player;
 				go.AddComponent<RightClickNavigation>();
 				go.AddComponent<ActionSelect>();
-				player.Credits -= Cost;
+				_player.Credits -= Cost;
 			};
 		}
 	}

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Definitions;
+﻿using Definitions;
 using Interactions;
 using UnityEngine;
 
@@ -13,18 +11,18 @@ public class FindBuildingSite : MonoBehaviour
 	public GameObject Worker;
 	public Transform Source;
 	
-	private Renderer rend;
-	Color Red = new Color(1, 0, 0, 0.5f);
-	Color Green = new Color(0, 1, 0, 0.5f);
+	private Renderer _rend;
+	private readonly Color _red = new Color(1, 0, 0, 0.5f);
+	private readonly Color _green = new Color(0, 1, 0, 0.5f);
 
 	private void Start()
 	{
 		MouseManager.Current.enabled = false;
-		rend = GetComponent<Renderer>();
+		_rend = GetComponent<Renderer>();
 	}
 
 	// Update is called once per frame
-	void Update ()
+	private void Update ()
 	{
 		var tempTarget = RtsManager.Current.ScreenPointToMapPosition(Input.mousePosition);
 		if (tempTarget.HasValue == false)
@@ -37,23 +35,23 @@ public class FindBuildingSite : MonoBehaviour
 //			return;
 //		}
 
-		if (RtsManager.Current.IsGameObjectSafeToPlace(gameObject))
+		if (RtsManager.IsGameObjectSafeToPlace(gameObject))
 		{
-			rend.material.color = Green;
+			_rend.material.color = _green;
 			if (Input.GetMouseButtonDown(0))
 			{
 				Worker.GetComponent<RightClickNavigation>().SendToTarget(transform.position);
-				var go = GameObject.Instantiate(BuildingPrefab);
+				var go = Instantiate(BuildingPrefab);
 				go.AddComponent<ActionSelect>();
 				go.transform.position = transform.position;
 				Info.Credits -= Cost;
 				go.AddComponent<Player>().Info = Info;
-				Destroy(this.gameObject);
+				Destroy(gameObject);
 			}
 		}
 		else
 		{
-			rend.material.color = Red;
+			_rend.material.color = _red;
 		}
 	}
 

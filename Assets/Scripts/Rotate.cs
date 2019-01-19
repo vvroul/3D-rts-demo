@@ -1,19 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Rotate : MonoBehaviour {
 
-    public Vector3 rotation = Vector3.zero;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    [FormerlySerializedAs("rotation")] public Vector3 Rotation = Vector3.zero;
 	
 	// Update is called once per frame
-	void Update ()
+	private void Update ()
     {
-        transform.Rotate(rotation * Time.deltaTime);	
+        transform.Rotate(Rotation * Time.deltaTime);	
 	}
 }

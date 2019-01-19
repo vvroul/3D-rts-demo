@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Ai
 {
@@ -12,7 +11,7 @@ namespace Ai
 		public int TriesPerDrone = 3;
 		public GameObject BasePrefab;
 		
-		private AiSupport _support = null;
+		private AiSupport _support;
 		
 
 		public override float GetWeight()
@@ -20,25 +19,24 @@ namespace Ai
 			if (_support == null)  _support = AiSupport.GetSupport(gameObject);
 			if (_support.Player.Credits < Cost || _support.Drones.Count == 0) return 0;
 
-			if (_support.CommandBases.Count * UnitsPerBase <= _support.Drones.Count) return 1;
-			return 0;
+			return _support.CommandBases.Count * UnitsPerBase <= _support.Drones.Count ? 1 : 0;
 		}
 
 		public override void Execute()
 		{
 			Debug.Log("Creating Base");
-			var go = GameObject.Instantiate(BasePrefab);
+			var go = Instantiate(BasePrefab);
 			go.AddComponent<Player>().Info = _support.Player;
 
 			foreach (var drone in _support.Drones)	{
-				for (int i = 0; i < TriesPerDrone; i++)
+				for (var i = 0; i < TriesPerDrone; i++)
 				{
 					var pos = drone.transform.position;
 					pos += Random.insideUnitSphere * RangeFromDrone;
 					pos.y = Terrain.activeTerrain.SampleHeight(pos);
 					go.transform.position = pos;
 
-					if (RtsManager.Current.IsGameObjectSafeToPlace(go))
+					if (RtsManager.IsGameObjectSafeToPlace(go))
 					{
 						_support.Player.Credits -= Cost;
 						return;

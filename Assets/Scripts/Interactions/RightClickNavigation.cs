@@ -8,8 +8,8 @@ namespace Interactions
     {
         private NavMeshAgent _agent;
         private Vector3 _target = Vector3.zero;
-        private bool _selected = false;
-        private bool _isActive = false;
+        private bool _selected;
+        private bool _isActive;
 
         [FormerlySerializedAs("relaxDistance")]
         public float RelaxDistance = 5;

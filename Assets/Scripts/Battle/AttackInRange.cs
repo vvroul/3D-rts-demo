@@ -1,6 +1,7 @@
 ﻿using Definitions;
 using Interactions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Battle
 {
@@ -11,26 +12,25 @@ namespace Battle
 		public float AttackRange = 20;
 		public float AttackFrequency = 0.25f;
 		public float AttackDamage = 1;
-		public float findTargetCounter = 0;
-		public float attackCounter = 0;
-		public PlayerSetupDefinition player;
+		[FormerlySerializedAs("findTargetCounter")] public float FindTargetCounter = 0;
+		[FormerlySerializedAs("attackCounter")] public float AttackCounter = 0;
+		[FormerlySerializedAs("player")] public PlayerSetupDefinition Player;
 
-		
 		private ShowUnitInfo _target;
 		
 		// Use this for initialization
-		void Start ()
+		private void Start ()
 		{
-			player = GetComponent<Player>().Info;
+			Player = GetComponent<Player>().Info;
 		}
 
-		void FindTarget()
+		private void FindTarget()
 		{
 			if (_target != null) return;
 
 			foreach (var p in RtsManager.Current.Players)
 			{
-				if (p == player) continue;
+				if (p == Player) continue;
 
 				foreach (var unit in p.ActiveUnits)
 				{
@@ -43,7 +43,7 @@ namespace Battle
 			}
 		}
 
-		void Attack()
+		private void Attack()
 		{
 			if (_target == null) return;
 			if (Vector3.Distance(_target.transform.position, transform.position) > AttackRange)
@@ -57,23 +57,23 @@ namespace Battle
 		}
 	
 		// Update is called once per frame
-		void Update ()
+		private void Update ()
 		{
-			findTargetCounter += Time.deltaTime;
-			if (findTargetCounter > FindTargetDelay)
+			FindTargetCounter += Time.deltaTime;
+			if (FindTargetCounter > FindTargetDelay)
 			{
 				FindTarget();
-				findTargetCounter = 0;
+				FindTargetCounter = 0;
 			}
 
-			attackCounter += Time.deltaTime;
-			if (attackCounter > AttackFrequency)
+			AttackCounter += Time.deltaTime;
+			if (AttackCounter > AttackFrequency)
 			{
 				Attack();
-				attackCounter = 0;
+				AttackCounter = 0;
 			}
 			
-			if (this.gameObject.GetComponent<ShowUnitInfo>().CurrentHealth <= 0) Destroy(this.gameObject);
+			if (gameObject.GetComponent<ShowUnitInfo>().CurrentHealth <= 0) Destroy(gameObject);
 		}
 	}
 }

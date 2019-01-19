@@ -9,7 +9,7 @@ using UnityEngine.AI;
 
 public class RtsManager : MonoBehaviour {
 
-	public static RtsManager Current = null;
+	public static RtsManager Current;
 
 	public List<PlayerSetupDefinition> Players = new List<PlayerSetupDefinition>();
     [FormerlySerializedAs("mapCollider")] public TerrainCollider MapCollider;
@@ -30,11 +30,11 @@ public class RtsManager : MonoBehaviour {
         return null;
     }
 
-    public bool IsGameObjectSafeToPlace(GameObject go)
+    public static bool IsGameObjectSafeToPlace(GameObject go)
     {
         var verts = go.GetComponent<MeshFilter>().mesh.vertices;
 
-        var obstacles = GameObject.FindObjectsOfType<NavMeshObstacle>();
+        var obstacles = FindObjectsOfType<NavMeshObstacle>();
         var cols = new List<Collider>();
         foreach (var o in obstacles)
         {
@@ -50,9 +50,9 @@ public class RtsManager : MonoBehaviour {
             var vReal = go.transform.TransformPoint(v);
             NavMesh.SamplePosition(vReal, out hit, 20, NavMesh.AllAreas);
 
-            bool onXaxis = Mathf.Abs(hit.position.x - vReal.x) < 0.5f;
-            bool onZaxis = Mathf.Abs(hit.position.z - vReal.z) < 0.5f;
-            bool hitCollider = cols.Any(c => c.bounds.Contains(vReal));
+            var onXaxis = Mathf.Abs(hit.position.x - vReal.x) < 0.5f;
+            var onZaxis = Mathf.Abs(hit.position.z - vReal.z) < 0.5f;
+            var hitCollider = cols.Any(c => c.bounds.Contains(vReal));
 
             if (!onXaxis || !onZaxis || hitCollider)
             {
@@ -78,7 +78,7 @@ public class RtsManager : MonoBehaviour {
             {
 //                if (u.GetComponent<ShowUnitInfo>().Name == "Command Center") continue;
                 //TO_DO
-                var go = (GameObject) GameObject.Instantiate(u, p.Location.position, p.Location.rotation);
+                var go = Instantiate(u, p.Location.position, p.Location.rotation);
                 var player = go.AddComponent<Player>();
                 player.Info = p;
                 if (!p.IsAi)
@@ -90,8 +90,4 @@ public class RtsManager : MonoBehaviour {
             }
         }
 	}
-	
-	// Update is called once per frame
-    
-    
 }

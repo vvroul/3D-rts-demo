@@ -22,8 +22,8 @@ public class Map : MonoBehaviour
     private void Start()
     {
         _terrainSize = new Vector2(
-            Corner2.position.x - Corner1.position.x,
-            Corner2.position.z - Corner1.position.z);
+        Corner2.position.x - Corner1.position.x,
+        Corner2.position.z - Corner1.position.z);
         _mapRect = GetComponent<RectTransform>();
     }
 
@@ -31,8 +31,8 @@ public class Map : MonoBehaviour
     {
         //var pos = point - Corner1.position;
         var mapPos = new Vector2(
-            point.x / _terrainSize.x * _mapRect.rect.width,
-            point.z / _terrainSize.y * _mapRect.rect.height);
+        point.x / _terrainSize.x * _mapRect.rect.width,
+        point.z / _terrainSize.y * _mapRect.rect.height);
         return mapPos;
     }
 

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace Interactions
 {
@@ -9,14 +8,14 @@ namespace Interactions
         public float MaxHealth, CurrentHealth;
         public Sprite ProfilePic;
 
-        private bool _showData = false;
+        private bool _showData;
 
         public override void Select()
         {
             _showData = true;
         }
-        
-        void Update()
+
+        private void Update()
         {
             if (!_showData) return;
             InfoManager.Current.SetPic(ProfilePic);

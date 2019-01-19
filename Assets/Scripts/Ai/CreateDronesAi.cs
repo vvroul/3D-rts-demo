@@ -5,7 +5,6 @@ namespace Ai
 {
 	public class CreateDronesAi : AiBehavior
 	{
-
 		public int DronesPerBase = 5;
 		public float Cost = 25;
 		private AiSupport _support;

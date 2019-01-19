@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Definitions;
+﻿using Definitions;
 using Interactions;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,7 +7,7 @@ public class Interactive : MonoBehaviour
 {
     private bool Selected { get; set; }
 
-    [FormerlySerializedAs("swap")] public bool Swap = false;
+    [FormerlySerializedAs("swap")] public bool Swap;
     private PlayerSetupDefinition _player;
 
     public Interactive()
@@ -34,12 +32,6 @@ public class Interactive : MonoBehaviour
             selection.Deselect();
         }
     }
-
-
-	// Use this for initialization
-    private void Start () {
-		
-	}
 	
 	// Update is called once per frame
     private void Update ()

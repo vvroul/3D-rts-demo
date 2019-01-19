@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Definitions;
+﻿using Definitions;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,12 +9,12 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Info.ActiveUnits.Add(this.gameObject);
+        Info.ActiveUnits.Add(gameObject);
     }
 
     private void OnDestroy()
     {
-        Info.ActiveUnits.Remove(this.gameObject);
+        Info.ActiveUnits.Remove(gameObject);
     }
 
 }

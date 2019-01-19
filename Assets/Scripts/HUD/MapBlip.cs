@@ -22,6 +22,6 @@ public class MapBlip : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		GameObject.Destroy(Blip);
+		Destroy(Blip);
 	}
 }

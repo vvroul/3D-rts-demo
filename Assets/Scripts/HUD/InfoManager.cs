@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Experimental.UIElements.StyleSheets;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using Image = UnityEngine.Experimental.UIElements.Image;
 
 public class InfoManager : MonoBehaviour
 {
 	public static InfoManager Current;
-	public UnityEngine.UI.Image ProfilePic;
+	public Image ProfilePic;
 	public Text Line1, Line2, Line3;
 
 	public InfoManager()

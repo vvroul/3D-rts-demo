@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Definitions;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ namespace Ai
 	{
 		public List<GameObject> Drones = new List<GameObject>();
 		public List<GameObject> CommandBases = new List<GameObject>();
-		public PlayerSetupDefinition Player = null;
+		public PlayerSetupDefinition Player;
 
 		public static AiSupport GetSupport(GameObject go)
 		{
