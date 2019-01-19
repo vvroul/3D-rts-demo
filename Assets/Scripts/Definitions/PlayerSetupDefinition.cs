@@ -7,11 +7,9 @@ namespace Definitions
     public class PlayerSetupDefinition
     {
         public string Name;
-
         public Transform Location;
-
+        public Transform MineralPatchLocation;
         public Color AccentColor;
-
         public List<GameObject> StartingUnits = new List<GameObject>();
 
         private readonly List<GameObject> _activeUnits = new List<GameObject>();
@@ -22,7 +20,6 @@ namespace Definitions
         }
 
         public bool IsAi;
-
         public float Credits;
     }
 }

@@ -10,7 +10,7 @@ using UnityEngine.AI;
 public class RtsManager : MonoBehaviour {
 
 	public static RtsManager Current;
-
+    public GameObject PrefabBase;
 	public List<PlayerSetupDefinition> Players = new List<PlayerSetupDefinition>();
     [FormerlySerializedAs("mapCollider")] public TerrainCollider MapCollider;
 
@@ -72,13 +72,24 @@ public class RtsManager : MonoBehaviour {
 	// Use this for initialization
     private void Start () {
 		//Current = this;
+        var count = 0;
         foreach (var p in Players)
         {
             foreach(var u in p.StartingUnits)
             {
-//                if (u.GetComponent<ShowUnitInfo>().Name == "Command Center") continue;
-                //TO_DO
-                var go = Instantiate(u, p.Location.position, p.Location.rotation);
+                ++count;
+                if (u.name == "Command Base")
+                {
+                    var myBase = Instantiate(u, p.Location.position, Quaternion.Euler(-90, 0 ,0));
+                    var thePlayer = myBase.AddComponent<Player>();
+                    thePlayer.Info = p;
+                    if (!p.IsAi)
+                    {
+                        if (Player.Default == null) Player.Default = p;
+                        myBase.AddComponent<ActionSelect>();
+                    }
+                }
+                var go = Instantiate(u, p.MineralPatchLocation.position + new Vector3(count, 0, count), p.Location.rotation);
                 var player = go.AddComponent<Player>();
                 player.Info = p;
                 if (!p.IsAi)
@@ -90,4 +101,16 @@ public class RtsManager : MonoBehaviour {
             }
         }
 	}
+
+    private void Update()
+    {
+        foreach (var p in Players)
+        {
+            foreach (var u in p.ActiveUnits)
+            {
+                if (p.IsAi)
+                    Destroy(GetComponent<RightClickNavigation>());
+            }
+        }
+    }
 }

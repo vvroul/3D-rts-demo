@@ -611,8 +611,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: -0.09969223, y: 0.86303294, z: 0.18775362, w: 0.4582403}
-  m_LocalPosition: {x: -97.69272, y: -358.7822, z: -27.484375}
+  m_LocalRotation: {x: -0.032053187, y: 0.93878406, z: 0.33072588, w: 0.090981066}
+  m_LocalPosition: {x: -58.537323, y: -552.01965, z: 97.8248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -4821,7 +4821,7 @@ MonoBehaviour:
   DronesRequired: 10
   TimeDelay: 5
   SquadSize: 0.5
-  IncreasePerwWave: 0
+  IncreasePerWave: 0
 --- !u!1 &365185080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6957,16 +6957,30 @@ MonoBehaviour:
   Players:
   - Name: Player 1
     Location: {fileID: 2019011285}
+    MineralPatchLocation: {fileID: 719514136}
     AccentColor: {r: 0, g: 0.91724133, b: 1, a: 1}
     StartingUnits:
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
     IsAi: 0
     Credits: 500
   - Name: Player 2
     Location: {fileID: 45316795}
+    MineralPatchLocation: {fileID: 1666185952}
     AccentColor: {r: 1, g: 0, b: 0, a: 1}
     StartingUnits:
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
+    - {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
     IsAi: 1
     Credits: 200
   MapCollider: {fileID: 214253329}
@@ -7699,7 +7713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastTab: 2
+  lastTab: 0
   movementSettingsFoldout: 0
   zoomingSettingsFoldout: 0
   rotationSettingsFoldout: 0
@@ -7708,11 +7722,11 @@ MonoBehaviour:
   targetingSettingsFoldout: 0
   inputSettingsFoldout: 0
   useFixedUpdate: 0
-  keyboardMovementSpeed: 100
+  keyboardMovementSpeed: 200
   screenEdgeMovementSpeed: 50
   followingSpeed: 5
   rotationSped: 3
-  panningSpeed: 50
+  panningSpeed: 100
   mouseRotationSpeed: 10
   autoHeight: 1
   groundMask:
@@ -19208,8 +19222,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688393481}
-  m_LocalRotation: {x: -0.09969223, y: 0.86303294, z: 0.18775362, w: 0.4582403}
-  m_LocalPosition: {x: -151.88553, y: -402.65833, z: 29.026337}
+  m_LocalRotation: {x: -0.032053187, y: 0.93878406, z: 0.33072588, w: 0.090981066}
+  m_LocalPosition: {x: -86.56476, y: -671.6317, z: 241.06726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -21297,8 +21311,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988496596}
-  m_LocalRotation: {x: 0.029151803, y: 0.94623375, z: 0.30960107, w: -0.089101456}
-  m_LocalPosition: {x: 59.714233, y: -319.24127, z: 125.941864}
+  m_LocalRotation: {x: -0.032053187, y: 0.93878406, z: 0.33072588, w: 0.090981066}
+  m_LocalPosition: {x: -93.86388, y: -702.2091, z: 278.3716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -21844,7 +21858,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2019011284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 358.7, y: 5.7, z: 155.4}
+  m_LocalPosition: {x: 326.2, y: 5.7, z: 138.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374370842}
