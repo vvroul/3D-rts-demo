@@ -31,18 +31,18 @@ namespace Ai
 			DronesRequired += IncreasePerWave;
 			
 			//Cheating
-			foreach (var p in RtsManager.Current.Players)
-			{
-				if (p.IsAi) continue;
-
-				for (var i = 0; i < wave; i++)
-				{
-					var drone = ai.Drones[i];
-					var nav = drone.GetComponent<RightClickNavigation>();
-					nav.SendToTarget(p.Location.position);
-				}
-				return;
-			}
+//			foreach (var p in RtsManager.Current.Players)
+//			{
+//				if (p.IsAi) continue;
+//
+//				for (var i = 0; i < wave; i++)
+//				{
+//					var drone = ai.Drones[i];
+//					var nav = drone.GetComponent<RightClickNavigation>();
+//					nav.SendToTarget(p.Location.position);
+//				}
+//				return;
+//			}
 		}
 	}
 }

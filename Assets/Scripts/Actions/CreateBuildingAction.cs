@@ -20,6 +20,7 @@ namespace Actions
 				if (player.Credits < Cost)
 				{
 					Debug.Log("Not enough" + Cost);
+					return;
 				}
 				var go = Instantiate(GhostBuildingPrefab);
 				var finder = go.AddComponent<FindBuildingSite>();

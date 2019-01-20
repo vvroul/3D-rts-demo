@@ -35,9 +35,11 @@ namespace Actions
 				);
 				if (go == null) throw new ArgumentNullException(string.Format("go{0}", "ARG0"));
 				go.AddComponent<Player>().Info = _player;
+				_player.Credits -= Cost;
+				if (_player.IsAi) return;	//for safety reasons
 				go.AddComponent<RightClickNavigation>();
 				go.AddComponent<ActionSelect>();
-				_player.Credits -= Cost;
+				
 			};
 		}
 	}

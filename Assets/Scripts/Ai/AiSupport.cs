@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Definitions;
+using Interactions;
 using UnityEngine;
 
 namespace Ai
@@ -20,6 +21,7 @@ namespace Ai
 			Drones.Clear();
 			CommandBases.Clear();
 			foreach (var u in Player.ActiveUnits) {
+				Destroy(u.GetComponent<RightClickNavigation>());
 				if (u.name.Contains("Drone Unit")) Drones.Add(u);
 				if (u.name.Contains("Command Base")) CommandBases.Add(u);
 			}

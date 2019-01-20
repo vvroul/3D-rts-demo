@@ -611,8 +611,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: -0.032053187, y: 0.93878406, z: 0.33072588, w: 0.090981066}
-  m_LocalPosition: {x: -58.537323, y: -552.01965, z: 97.8248}
+  m_LocalRotation: {x: -0.19683264, y: 0.8027877, z: 0.4115475, w: 0.38394976}
+  m_LocalPosition: {x: -58.165436, y: -383.04712, z: 51.17032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -6954,6 +6954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9868517413716cb4289490d0c86633d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrefabBase: {fileID: 0}
   Players:
   - Name: Player 1
     Location: {fileID: 2019011285}
@@ -6967,6 +6968,7 @@ MonoBehaviour:
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
     - {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
+    _activeUnits: []
     IsAi: 0
     Credits: 500
   - Name: Player 2
@@ -6981,6 +6983,7 @@ MonoBehaviour:
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
     - {fileID: 1676574707831108, guid: cde2eb67cd73fff4a8be85a0f83acbab, type: 2}
     - {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
+    _activeUnits: []
     IsAi: 1
     Credits: 200
   MapCollider: {fileID: 214253329}
@@ -19222,8 +19225,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688393481}
-  m_LocalRotation: {x: -0.032053187, y: 0.93878406, z: 0.33072588, w: 0.090981066}
-  m_LocalPosition: {x: -86.56476, y: -671.6317, z: 241.06726}
+  m_LocalRotation: {x: -0.19683264, y: 0.8027877, z: 0.4115475, w: 0.38394976}
+  m_LocalPosition: {x: -67.87186, y: -402.58865, z: 58.996643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -21311,8 +21314,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988496596}
-  m_LocalRotation: {x: -0.032053187, y: 0.93878406, z: 0.33072588, w: 0.090981066}
-  m_LocalPosition: {x: -93.86388, y: -702.2091, z: 278.3716}
+  m_LocalRotation: {x: -0.19683264, y: 0.8027877, z: 0.4115475, w: 0.38394976}
+  m_LocalPosition: {x: -67.87186, y: -402.58865, z: 58.996643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
