@@ -22,7 +22,7 @@ namespace Actions
 			{
 				foreach (var u in _unbornUnits)
 				{
-					u.GetComponent<RightClickNavigation>().SendToTarget(_player.MineralPatchLocation.position);
+					//u.GetComponent<RightClickNavigation>().SendToTarget(_player.MineralPatchLocation.position);
 				}
 			};
 		}

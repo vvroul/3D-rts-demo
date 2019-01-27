@@ -89,16 +89,19 @@ public class RtsManager : MonoBehaviour {
                         myBase.AddComponent<ActionSelect>();
                     }
                 }
-                var go = Instantiate(u, p.MineralPatchLocation.position + new Vector3(count, 0, count), p.Location.rotation);
-                var player = go.AddComponent<Player>();
-                player.Info = p;
-                if (Player.Default == null) Player.Default = p;
-                if (p.Name == "Player 2")
+                else
                 {
-                    continue;
+                    var go = Instantiate(u, p.WorkerSpawnPoint.position + new Vector3(0, 0, count*2), p.WorkerSpawnPoint.rotation);
+                    var player = go.AddComponent<Player>();
+                    player.Info = p;
+                    if (Player.Default == null) Player.Default = p;
+                    if (p.Name == "Player 2")
+                    {
+                        continue;
+                    }
+                    go.AddComponent<RightClickNavigation>();
+                    go.AddComponent<ActionSelect>();
                 }
-                go.AddComponent<RightClickNavigation>();
-                go.AddComponent<ActionSelect>();
             }
         }
 	}

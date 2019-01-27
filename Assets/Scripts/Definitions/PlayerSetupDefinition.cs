@@ -8,7 +8,7 @@ namespace Definitions
     {
         public string Name;
         public Transform Location;
-        public Transform MineralPatchLocation;
+        public Transform WorkerSpawnPoint;
         public Color AccentColor;
         public List<GameObject> StartingUnits = new List<GameObject>();
 

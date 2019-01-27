@@ -811,13 +811,16 @@ MonoBehaviour:
   AttackRange: 20
   AttackFrequency: 0.25
   AttackDamage: 1
-  findTargetCounter: 0
-  attackCounter: 0
-  player:
+  FindTargetCounter: 0
+  AttackCounter: 0
+  Player:
     Name: 
     Location: {fileID: 0}
+    MineralPatchLocation: {fileID: 0}
+    WorkerSpawnPoint: {fileID: 0}
     AccentColor: {r: 0, g: 0, b: 0, a: 0}
     StartingUnits: []
+    _activeUnits: []
     IsAi: 0
     Credits: 0
 --- !u!135 &135702756692318430
