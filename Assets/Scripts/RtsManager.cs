@@ -89,7 +89,18 @@ public class RtsManager : MonoBehaviour {
                         myBase.AddComponent<ActionSelect>();
                     }
                 }
-                else
+                else if (u.name == "RnD_Center") 
+                {
+                    var rndCenter = Instantiate(u, p.RnDSpawnPoint.position, p.RnDSpawnPoint.rotation);
+                    var thePlayer = rndCenter.AddComponent<Player>();
+                    thePlayer.Info = p;
+                    if (!p.IsAi)
+                    {
+                        if (Player.Default == null) Player.Default = p;
+                        rndCenter.AddComponent<ActionSelect>();
+                    }
+                }
+                else 
                 {
                     var go = Instantiate(u, p.WorkerSpawnPoint.position + new Vector3(0, 0, count*2), p.WorkerSpawnPoint.rotation);
                     var player = go.AddComponent<Player>();

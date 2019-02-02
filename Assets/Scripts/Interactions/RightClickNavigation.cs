@@ -12,7 +12,7 @@ namespace Interactions
         private bool _isActive;
 
         [FormerlySerializedAs("relaxDistance")]
-        public float RelaxDistance = 5;
+        public float RelaxDistance = 4;
 
         public override void Deselect()
         {
