@@ -46,26 +46,19 @@ public class MouseManager : MonoBehaviour
         
 
         
-        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.RightControl))
-        {
-            
-            foreach (var un in _sameUnits)
-            {
-                if (un != null)
-                {
-                    un.GetComponent<Interactive>().Deselect();
-                }
-            }
-        }
+//        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.RightControl))
+//        {
+//            
+//            foreach (var un in _sameUnits)
+//            {
+//                if (un != null)
+//                {
+//                    un.GetComponent<Interactive>().Deselect();
+//                }
+//            }
+//        }
 
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
-        {
-            _sameUnits = GameObject.FindGameObjectsWithTag("Worker");
-            foreach (var un in _sameUnits)
-            {
-                un.GetComponent<Interactive>().Select();
-            }
-        }
+
 
 
         // ReSharper disable once Unity.InefficientCameraMainUsage
@@ -84,9 +77,21 @@ public class MouseManager : MonoBehaviour
             return;
         }
         
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        {
+            _sameUnits = GameObject.FindGameObjectsWithTag("Worker");
+            foreach (var un in _sameUnits)
+            {
+                un.GetComponent<Interactive>().Select();
+                _selections.Add(un.GetComponent<Interactive>());
+            }
+        }
+        else
+        { 
+            _selections.Add(interact);
+            interact.Select();
+        }
         
 
-        _selections.Add(interact);
-        interact.Select();
     }
 }
