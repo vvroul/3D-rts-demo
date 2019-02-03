@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 114822536931983106}
   - component: {fileID: 33452920668008210}
   - component: {fileID: 23938322104742214}
+  - component: {fileID: 114108014425456058}
   m_Layer: 0
   m_Name: RnD_Center
   m_TagString: Resource Center
@@ -742,6 +743,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06301e7d3c69f0048bfdbc1713fc647e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114108014425456058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149611686909744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa51bbdd4dc40384ba2618f1ce569887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114123761605165584
