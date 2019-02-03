@@ -212,8 +212,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: 0.05193259, y: 0.9473743, z: 0.2040288, w: -0.2411581}
-  m_LocalPosition: {x: 21.41211, y: -319.3722, z: -35.044083}
+  m_LocalRotation: {x: -0.002392467, y: 0.8709601, z: 0.49132973, w: 0.004233999}
+  m_LocalPosition: {x: 75.052124, y: -562.3564, z: 236.2735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -1211,10 +1211,11 @@ GameObject:
   m_Component:
   - component: {fileID: 355147334}
   - component: {fileID: 355147336}
-  - component: {fileID: 355147335}
   - component: {fileID: 355147337}
   - component: {fileID: 355147338}
   - component: {fileID: 355147339}
+  - component: {fileID: 355147340}
+  - component: {fileID: 355147335}
   m_Layer: 0
   m_Name: Player 2 Ai
   m_TagString: Untagged
@@ -1277,9 +1278,9 @@ MonoBehaviour:
   WeightMultiplier: 1
   TimePassed: 0
   Cost: 200
-  UnitsPerBase: 5
+  UnitsPerBase: 15
   RangeFromDrone: 30
-  TriesPerDrone: 3
+  TriesPerDrone: 1
   BasePrefab: {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
 --- !u!114 &355147338
 MonoBehaviour:
@@ -1292,9 +1293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82338b91383bf4c4cb1996c32f4e0342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeightMultiplier: 1
+  WeightMultiplier: 1.1
   TimePassed: 0
-  DronesPerBase: 5
+  DronesPerBase: 16
   Cost: 25
 --- !u!114 &355147339
 MonoBehaviour:
@@ -1313,6 +1314,24 @@ MonoBehaviour:
   TimeDelay: 5
   SquadSize: 0.5
   IncreasePerWave: 0
+--- !u!114 &355147340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355147333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39ac10ea1cae5f4e8777a04b86a0f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeightMultiplier: 1
+  TimePassed: 0
+  Cost: 100
+  UnitsPerBase: 10
+  RangeFromDrone: 15
+  TriesPerDrone: 1
+  BasePrefab: {fileID: 1149611686909744, guid: ae64d327999a8fc4a9f9118a8e2aeae1, type: 2}
 --- !u!1 &374370841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,8 +1515,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381646153}
-  m_LocalRotation: {x: -0.23626699, y: 0.5345869, z: 0.15872237, w: 0.79573995}
-  m_LocalPosition: {x: 278.24695, y: -15.454708, z: 115.854645}
+  m_LocalRotation: {x: -0.002392467, y: 0.8709601, z: 0.49132973, w: 0.004233999}
+  m_LocalPosition: {x: 357.58212, y: -255.2735, z: 424.726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4945,8 +4964,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890988646}
-  m_LocalRotation: {x: -0.25336576, y: 0.4012539, z: 0.11651872, w: 0.8724818}
-  m_LocalPosition: {x: 299.92767, y: -15.7192, z: 114.76188}
+  m_LocalRotation: {x: -0.002392467, y: 0.8709601, z: 0.49132973, w: 0.004233999}
+  m_LocalPosition: {x: 357.58212, y: -255.2735, z: 424.726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

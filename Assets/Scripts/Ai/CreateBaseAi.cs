@@ -24,7 +24,7 @@ namespace Ai
 
 		public override void Execute()
 		{
-			Debug.Log("Creating Base");
+			Debug.Log("Creating Base " + BasePrefab.name);
 			var go = Instantiate(BasePrefab);
 			go.AddComponent<Player>().Info = _support.Player;
 

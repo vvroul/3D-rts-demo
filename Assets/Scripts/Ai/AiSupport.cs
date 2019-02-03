@@ -9,6 +9,7 @@ namespace Ai
 	{
 		public List<GameObject> Drones = new List<GameObject>();
 		public List<GameObject> CommandBases = new List<GameObject>();
+		public List<GameObject> ResourceCenters = new List<GameObject>();
 		public PlayerSetupDefinition Player;
 
 		public static AiSupport GetSupport(GameObject go)
@@ -20,10 +21,12 @@ namespace Ai
 		{
 			Drones.Clear();
 			CommandBases.Clear();
+			ResourceCenters.Clear();
 			foreach (var u in Player.ActiveUnits) {
 				Destroy(u.GetComponent<RightClickNavigation>());
 				if (u.name.Contains("Drone Unit")) Drones.Add(u);
 				if (u.name.Contains("Command Base")) CommandBases.Add(u);
+				if (u.name.Contains("RnD_Center")) ResourceCenters.Add(u);
 			}
 		}
 	}

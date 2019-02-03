@@ -4,7 +4,7 @@ namespace Ai
 {
 	public class DoNothingAi : AiBehavior
 	{
-		public float ReturnWeight = 0.5f;
+		public float ReturnWeight = 0.2f;
 		
 		public override float GetWeight()
 		{
