@@ -22,14 +22,18 @@ namespace Actions
 					Debug.Log("Not enough" + Cost);
 					return;
 				}
-				var go = Instantiate(GhostBuildingPrefab);
-				var finder = go.AddComponent<FindBuildingSite>();
-				finder.BuildingPrefab = BuildingPrefab;
-				finder.Worker = gameObject;
-				finder.MaxBuildingDistance = MaxBuildingDistance;
-				finder.Info = player;
-				finder.Source = transform;
-				_active = go;
+				else
+				{
+					var go = Instantiate(GhostBuildingPrefab);
+					var finder = go.AddComponent<FindBuildingSite>();
+					finder.BuildingPrefab = BuildingPrefab;
+					finder.Worker = gameObject;
+					finder.MaxBuildingDistance = MaxBuildingDistance;
+					finder.Info = player;
+					finder.Source = transform;
+					finder.Cost = Cost;
+					_active = go;
+				}
 			};
 		}
 

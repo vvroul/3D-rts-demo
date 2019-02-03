@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FindBuildingSite : MonoBehaviour
 {
-	public float Cost = 200;
+	public float Cost;
 	public float MaxBuildingDistance = 5000;
 	public GameObject BuildingPrefab;
 	public PlayerSetupDefinition Info;

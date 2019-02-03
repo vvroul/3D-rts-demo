@@ -42,24 +42,21 @@ public class MouseManager : MonoBehaviour
 
                 _selections.Clear();
             }
+            
+            if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.RightControl))
+            {
+            
+                foreach (var un in _sameUnits)
+                {
+                    if (un != null)
+                    {
+                        un.GetComponent<Interactive>().Deselect();
+                    }
+                }
+                
+                _selections.Clear();
+            }
         }
-        
-
-        
-//        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.RightControl))
-//        {
-//            
-//            foreach (var un in _sameUnits)
-//            {
-//                if (un != null)
-//                {
-//                    un.GetComponent<Interactive>().Deselect();
-//                }
-//            }
-//        }
-
-
-
 
         // ReSharper disable once Unity.InefficientCameraMainUsage
         if (Camera.main == null) return;

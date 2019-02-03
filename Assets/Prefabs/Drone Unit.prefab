@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1060547709703412
 GameObject:
   m_ObjectHideFlags: 1
@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 114624666077779672}
   - component: {fileID: 114092172867368952}
   - component: {fileID: 114415550339992478}
+  - component: {fileID: 114765912501522232}
   - component: {fileID: 114081554489459746}
   - component: {fileID: 114685327551145038}
   - component: {fileID: 114877329267154164}
@@ -391,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 1041730848939750}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -1.27, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 4536233503896464}
   m_RootOrder: 3
@@ -485,7 +486,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676574707831108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 330.81653, y: 4.2183685, z: 158.40099}
+  m_LocalPosition: {x: 305.7286, y: 4.2256107, z: 149.9755}
   m_LocalScale: {x: -1, y: -1, z: -1}
   m_Children:
   - {fileID: 4447171496076986}
@@ -609,7 +610,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: bf8341300f7ca604588db8475af26c7a, type: 2}
+  - {fileID: 2100000, guid: 6abd231ef22329a4fb98005f4b7289de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -862,8 +863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a126dd2f291704293804cb4788c55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {x: 0, y: 0, z: 0}
-  _selected: 0
   RelaxDistance: 5
 --- !u!114 &114697011329424320
 MonoBehaviour:
@@ -899,6 +898,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   speed_rnd: 0.5
+--- !u!114 &114765912501522232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676574707831108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0234044293a8c6c4ab83269973f1bd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonPic: {fileID: 21300000, guid: c4b363f6e473c8b44a514619af0334e1, type: 3}
+  Cost: 100
+  BuildingPrefab: {fileID: 1149611686909744, guid: ae64d327999a8fc4a9f9118a8e2aeae1,
+    type: 2}
+  MaxBuildingDistance: 30
+  GhostBuildingPrefab: {fileID: 1553940221951918, guid: a41ceb042b5699d4ab7fb317f36fc1ab,
+    type: 2}
 --- !u!114 &114877329267154164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -920,6 +937,7 @@ MonoBehaviour:
     Name: 
     Location: {fileID: 0}
     WorkerSpawnPoint: {fileID: 0}
+    RnDSpawnPoint: {fileID: 0}
     AccentColor: {r: 0, g: 0, b: 0, a: 0}
     StartingUnits: []
     _activeUnits: []

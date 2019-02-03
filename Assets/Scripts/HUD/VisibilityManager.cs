@@ -5,9 +5,9 @@ using UnityEngine.Serialization;
 public class VisibilityManager : MonoBehaviour
 {
     [FormerlySerializedAs("timeBetweenChecks")]
-    public float TimeBetweenChecks = 1;
+    public float TimeBetweenChecks = 5;
 
-    [FormerlySerializedAs("visibleRange")] public float VisibleRange = 5;
+    [FormerlySerializedAs("visibleRange")] public float VisibleRange = 1;
 
     private float _waited = 10000;
 
