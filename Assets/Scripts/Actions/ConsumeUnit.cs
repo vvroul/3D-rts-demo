@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Definitions;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Actions
 {
@@ -10,6 +11,7 @@ namespace Actions
 	{
 		public List<GameObject> Workers =  new List<GameObject>();
 		public int WorkerCount = 0;
+		public Text CapacityText;
 		
 		private PlayerSetupDefinition _player;
 		private GameObject _go;
@@ -17,6 +19,7 @@ namespace Actions
 		private void Start()
 		{
 			_player = GetComponent<Player>().Info;
+			CapacityText.text = "[" + WorkerCount.ToString() + " / 16]";
 		}
 
 		public override Action GetClickAction()
@@ -35,6 +38,7 @@ namespace Actions
 					{
 						Workers.Add(_go);
 						++WorkerCount;
+						CapacityText.text = "[" + WorkerCount.ToString() + " / 16]";
 						Destroy(_go);
 						gameObject.GetComponent<Earnings>().CreditsPerSecond += 1;
 					}
