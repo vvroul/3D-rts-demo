@@ -4,6 +4,7 @@ using UnityEngine;
 public class Earnings : MonoBehaviour
 {
 	public float CreditsPerSecond = 1;
+	
 	private PlayerSetupDefinition _player;
 
 	// Use this for initialization
