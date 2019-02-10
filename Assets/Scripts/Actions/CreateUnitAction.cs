@@ -30,7 +30,7 @@ namespace Actions
 				
 				var go = Instantiate(
 					Prefab,
-					transform.position,
+					transform.position + new Vector3(0, 0, UnityEngine.Random.Range(10, 15)),
 					Quaternion.identity
 				);
 				if (go == null) throw new ArgumentNullException(string.Format("go{0}", "ARG0"));
