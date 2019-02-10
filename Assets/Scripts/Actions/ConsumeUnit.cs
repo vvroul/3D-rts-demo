@@ -26,7 +26,6 @@ namespace Actions
 		{
 			return delegate
 			{
-				if (_player.IsAi) return;	//for safety reasons
 				foreach (var u in _player._activeUnits)
 				{
 					if (u.name.Contains("Drone Unit"))

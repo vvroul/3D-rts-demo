@@ -212,8 +212,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51237317}
-  m_LocalRotation: {x: -0.29539803, y: 0.5368041, z: 0.20797119, w: 0.7624497}
-  m_LocalPosition: {x: -44.16623, y: -378.49216, z: -80.1863}
+  m_LocalRotation: {x: -0.115693465, y: 0.8227332, z: 0.52632856, w: 0.18084048}
+  m_LocalPosition: {x: -43.957153, y: -436.3988, z: -33.58188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 190645181}
@@ -1216,6 +1216,7 @@ GameObject:
   - component: {fileID: 355147339}
   - component: {fileID: 355147340}
   - component: {fileID: 355147335}
+  - component: {fileID: 355147341}
   m_Layer: 0
   m_Name: Player 2 Ai
   m_TagString: Untagged
@@ -1247,9 +1248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657870750bc7fee448e405130823b0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeightMultiplier: 1
+  WeightMultiplier: 0.5
   TimePassed: 0
-  ReturnWeight: 0.5
+  ReturnWeight: 0
 --- !u!114 &355147336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,8 +1263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerName: Player 2
-  Confusion: 0
-  Frequency: 0
+  Confusion: 0.3
+  Frequency: 1
 --- !u!114 &355147337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,9 +1279,7 @@ MonoBehaviour:
   WeightMultiplier: 1
   TimePassed: 0
   Cost: 200
-  UnitsPerBase: 15
   RangeFromDrone: 30
-  TriesPerDrone: 1
   BasePrefab: {fileID: 154004, guid: 905658b86d4f55d47bfdf1d38c439127, type: 2}
 --- !u!114 &355147338
 MonoBehaviour:
@@ -1293,9 +1292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82338b91383bf4c4cb1996c32f4e0342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeightMultiplier: 1.1
+  WeightMultiplier: 1.5
   TimePassed: 0
-  DronesPerBase: 16
   Cost: 25
 --- !u!114 &355147339
 MonoBehaviour:
@@ -1325,13 +1323,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39ac10ea1cae5f4e8777a04b86a0f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeightMultiplier: 1
+  WeightMultiplier: 1.7
   TimePassed: 0
   Cost: 100
-  UnitsPerBase: 10
-  RangeFromDrone: 15
-  TriesPerDrone: 1
+  RangeFromDrone: 30
   BasePrefab: {fileID: 1149611686909744, guid: ae64d327999a8fc4a9f9118a8e2aeae1, type: 2}
+--- !u!114 &355147341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355147333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e43e39790d45eab7166b0ce33d2250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeightMultiplier: 1.5
+  TimePassed: 0
 --- !u!1 &374370841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,8 +1524,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381646153}
-  m_LocalRotation: {x: -0.29539803, y: 0.5368041, z: 0.20797119, w: 0.7624497}
-  m_LocalPosition: {x: 275.87643, y: -38.81999, z: 121.42467}
+  m_LocalRotation: {x: -0.115693465, y: 0.8227332, z: 0.52632856, w: 0.18084048}
+  m_LocalPosition: {x: 286.7781, y: -93.15067, z: 263.4186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4753,7 +4762,7 @@ Camera:
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BackGroundColor: {r: 0.96061, g: 0.05490196, b: 1, a: 1}
   m_projectionMatrixMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -4790,8 +4799,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1759817434}
-  m_LocalRotation: {x: 0.26083422, y: 0.7142974, z: 0.33482936, w: -0.5564477}
-  m_LocalPosition: {x: 151.19879, y: 42.225517, z: 23.845444}
+  m_LocalRotation: {x: -0.11569345, y: 0.8227332, z: 0.52632856, w: 0.18084046}
+  m_LocalPosition: {x: 76.158844, y: -95.980606, z: 220.66367}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852260268}
@@ -4964,8 +4973,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890988646}
-  m_LocalRotation: {x: -0.29539803, y: 0.5368041, z: 0.20797119, w: 0.7624497}
-  m_LocalPosition: {x: 243.64975, y: -66.82832, z: 110.11957}
+  m_LocalRotation: {x: -0.115693465, y: 0.8227332, z: 0.52632856, w: 0.18084048}
+  m_LocalPosition: {x: 291.41962, y: -109.60489, z: 282.8582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
