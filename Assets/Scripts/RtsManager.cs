@@ -10,7 +10,6 @@ using UnityEngine.AI;
 public class RtsManager : MonoBehaviour {
 
 	public static RtsManager Current;
-    public GameObject PrefabBase;
 	public List<PlayerSetupDefinition> Players = new List<PlayerSetupDefinition>();
     [FormerlySerializedAs("mapCollider")] public TerrainCollider MapCollider;
 
