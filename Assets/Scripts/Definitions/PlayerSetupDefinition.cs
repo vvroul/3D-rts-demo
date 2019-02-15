@@ -8,7 +8,8 @@ namespace Definitions
     {
         public string Name;
         public Transform Location;
-        public Transform WorkerSpawnPoint;
+        public Transform StartingWorkerSpawnPoint;
+        public Transform SpawnToPosition;
         public Transform RnDSpawnPoint;
         public Color AccentColor;
         public List<GameObject> StartingUnits = new List<GameObject>();

@@ -2,6 +2,8 @@
 using Definitions;
 using Interactions;
 using UnityEngine;
+using UnityEngine.AI;
+using Random = System.Random;
 
 namespace Actions
 {
@@ -27,10 +29,10 @@ namespace Actions
 					Debug.Log("Cannot create is costs : " + Cost);
 					return;
 				}
-				
+
 				var go = Instantiate(
 					Prefab,
-					transform.position + new Vector3(0, 0, UnityEngine.Random.Range(10, 15)),
+					_player.SpawnToPosition.position + Vector3.right * UnityEngine.Random.Range(5,10),
 					Quaternion.identity
 				);
 				if (go == null) throw new ArgumentNullException(string.Format("go{0}", "ARG0"));

@@ -101,7 +101,7 @@ public class RtsManager : MonoBehaviour {
                 }
                 else 
                 {
-                    var go = Instantiate(u, p.WorkerSpawnPoint.position + new Vector3(0, 0, count*2), p.WorkerSpawnPoint.rotation);
+                    var go = Instantiate(u, p.StartingWorkerSpawnPoint.position + new Vector3(0, 0, count*2), p.StartingWorkerSpawnPoint.rotation);
                     var player = go.AddComponent<Player>();
                     player.Info = p;
                     if (Player.Default == null) Player.Default = p;
