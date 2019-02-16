@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82338b91383bf4c4cb1996c32f4e0342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeightMultiplier: 1.5
+  WeightMultiplier: 1.2
   TimePassed: 0
   Cost: 25
 --- !u!114 &355147339
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39ac10ea1cae5f4e8777a04b86a0f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeightMultiplier: 1.5
+  WeightMultiplier: 1
   TimePassed: 0
   Cost: 100
   RangeFromDrone: 75

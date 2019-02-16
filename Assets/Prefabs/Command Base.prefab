@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 114159310935675214}
   - component: {fileID: 114535247093657206}
   - component: {fileID: 114182687768372846}
+  - component: {fileID: 114811755315314058}
   m_Layer: 0
   m_Name: Command Base
   m_TagString: Base
@@ -62,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154004}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 306.24716, y: 4.2960663, z: 153.28879}
+  m_LocalPosition: {x: 910.9977, y: 0, z: 951.6383}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 470276}
@@ -1456,6 +1457,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplayItem: {fileID: 1016147220118348}
+--- !u!114 &114811755315314058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb55f0304c084149879e47fa3cf64a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonPic: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114814589458546642
 MonoBehaviour:
   m_ObjectHideFlags: 1

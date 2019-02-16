@@ -1,12 +1,14 @@
 ﻿using Definitions;
 using Interactions;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Serialization;
 
 namespace Battle
 {
 	public class AttackInRange : MonoBehaviour
 	{
+		[Header("Unity Stuff")] public Image HealthBar;
 
 		public float FindTargetDelay = 1;
 		public float AttackRange = 20;
@@ -15,6 +17,7 @@ namespace Battle
 		[FormerlySerializedAs("findTargetCounter")] public float FindTargetCounter = 0;
 		[FormerlySerializedAs("attackCounter")] public float AttackCounter = 0;
 		[FormerlySerializedAs("player")] public PlayerSetupDefinition Player;
+		private float _health;
 
 		private ShowUnitInfo _target;
 		
@@ -53,6 +56,7 @@ namespace Battle
 			}
 
 			_target.CurrentHealth -= AttackDamage;
+			HealthBar.fillAmount = _target.CurrentHealth / _target.MaxHealth;
 			if (_target.CurrentHealth <= 0) Destroy(_target.gameObject);
 		}
 	
