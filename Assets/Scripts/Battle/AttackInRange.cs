@@ -17,10 +17,8 @@ namespace Battle
 		[FormerlySerializedAs("findTargetCounter")] public float FindTargetCounter = 0;
 		[FormerlySerializedAs("attackCounter")] public float AttackCounter = 0;
 		[FormerlySerializedAs("player")] public PlayerSetupDefinition Player;
-		private float _health;
-
 		private ShowUnitInfo _target;
-		
+
 		// Use this for initialization
 		private void Start ()
 		{
@@ -56,7 +54,6 @@ namespace Battle
 			}
 
 			_target.CurrentHealth -= AttackDamage;
-			HealthBar.fillAmount = _target.CurrentHealth / _target.MaxHealth;
 			if (_target.CurrentHealth <= 0) Destroy(_target.gameObject);
 		}
 	
@@ -74,9 +71,12 @@ namespace Battle
 			if (AttackCounter > AttackFrequency)
 			{
 				Attack();
+				
 				AttackCounter = 0;
 			}
-			
+
+			HealthBar.fillAmount = gameObject.GetComponent<ShowUnitInfo>().CurrentHealth /
+			                       gameObject.GetComponent<ShowUnitInfo>().MaxHealth;
 			if (gameObject.GetComponent<ShowUnitInfo>().CurrentHealth <= 0) Destroy(gameObject);
 		}
 	}
