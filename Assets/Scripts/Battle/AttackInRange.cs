@@ -8,7 +8,7 @@ namespace Battle
 {
 	public class AttackInRange : MonoBehaviour
 	{
-		[Header("Unity Stuff")] public Image HealthBar;
+		[Header("Health Bar")] public Image HealthBar;
 
 		public float FindTargetDelay = 1;
 		public float AttackRange = 20;
