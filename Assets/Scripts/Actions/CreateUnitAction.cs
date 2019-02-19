@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Definitions;
 using Interactions;
 using UnityEngine;
@@ -24,25 +25,28 @@ namespace Actions
 		{
 			return delegate
 			{
-				if (_player.Credits < Cost)
-				{
-					Debug.Log("Cannot create is costs : " + Cost);
-					return;
-				}
-
-				var go = Instantiate(
-					Prefab,
-					_player.SpawnToPosition.position + Vector3.right * UnityEngine.Random.Range(5,10),
-					Quaternion.identity
-				);
-				if (go == null) throw new ArgumentNullException(string.Format("go{0}", "ARG0"));
-				go.AddComponent<Player>().Info = _player;
-				_player.Credits -= Cost;
-				if (_player.IsAi) return;	//for safety reasons
-				go.AddComponent<RightClickNavigation>();
-				go.AddComponent<ActionSelect>();
-				
+				Invoke ("TheAction", 4);
 			};
+		}
+
+		void TheAction()
+		{
+			if (_player.Credits < Cost)
+			{
+				Debug.Log("Cannot create is costs : " + Cost);
+				return;
+			}
+			var go = Instantiate(
+				Prefab,
+				_player.SpawnToPosition.position + Vector3.right * UnityEngine.Random.Range(5,10),
+				Quaternion.identity
+			);
+			if (go == null) throw new ArgumentNullException(string.Format("go{0}", "ARG0"));
+			go.AddComponent<Player>().Info = _player;
+			_player.Credits -= Cost;
+			if (_player.IsAi) return;	//for safety reasons
+			go.AddComponent<RightClickNavigation>();
+			go.AddComponent<ActionSelect>();
 		}
 	}
 }
