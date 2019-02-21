@@ -3,6 +3,7 @@ using System.Collections;
 using Definitions;
 using Interactions;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.AI;
 using Random = System.Random;
 
@@ -15,7 +16,7 @@ namespace Actions
 		public float Cost;
 
 		private PlayerSetupDefinition _player;
-
+		
 		private void Start()
 		{
 			_player = GetComponent<Player>().Info;
@@ -25,7 +26,7 @@ namespace Actions
 		{
 			return delegate
 			{
-				Invoke ("TheAction", 4);
+				TheAction();
 			};
 		}
 
